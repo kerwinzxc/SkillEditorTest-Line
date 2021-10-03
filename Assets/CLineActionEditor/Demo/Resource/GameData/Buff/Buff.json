@@ -1,0 +1,24 @@
+
+{
+    "Property" : [
+        {
+            "BuffType" : "EBT_NumericalBuff",
+            "BuffData" : {
+                "ID" : "1",
+                "Name" : "\u79FB\u52A8\u901F\u5EA6\u52A0+10%",
+                "Description" : "\u79FB\u52A8\u901F\u5EA6\u52A0+10%",
+                "Icon"        : "",
+                "BuffTarget"  : "EBT_Self",
+                "AddType"     : "EAT_AddNone",
+                "AddNum"      : 99,
+                "Duration"    : -1,
+                "Attr"        : "EAT_CurMoveSpeed",
+                "AddValue"    : 0,
+                "MulValue"    : 10000,
+                "StartEffect" : "",
+                "KeepEffect"  : "",
+                "BuffDummy"   : ""
+            }
+        }
+    ]
+}

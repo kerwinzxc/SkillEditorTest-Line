@@ -1,0 +1,38 @@
+
+{
+    "Property" : [
+        {
+            "ID" : "1",
+            "Name" : "player1001",
+            "Description" : "",
+            "Prefab"      : "/prefabs/player/player1001.prefab",
+            "StartupAction" : "idle",
+            "PlayerSex"     : "EPS_Man",
+            "VictoryActionList" : [
+            ],
+            "ActionGroup"       : "player1001"
+        },
+        {
+            "ID" : "2",
+            "Name" : "player1002",
+            "Description" : "",
+            "Prefab"      : "/prefabs/player/player1002.prefab",
+            "StartupAction" : "idle",
+            "PlayerSex"     : "EPS_Man",
+            "VictoryActionList" : [
+            ],
+            "ActionGroup"       : "player1002"
+        },
+        {
+            "ID" : "3",
+            "Name" : "player1003",
+            "Description" : "",
+            "Prefab"      : "/prefabs/player/player1003.prefab",
+            "StartupAction" : "idle",
+            "PlayerSex"     : "EPS_Man",
+            "VictoryActionList" : [
+            ],
+            "ActionGroup"       : "player1003"
+        }
+    ]
+}

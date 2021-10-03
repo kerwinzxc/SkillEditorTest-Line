@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: ece6a8d0f3c283d4a9ebf6bd3292b6c2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_PersistentViewDataDictionary: {instanceID: 0}
+  - TexturePlay: {fileID: 2800000, guid: 69fb0d7c51c7cd0409d0ca96178123cc, type: 3}
+  - TexturePause: {fileID: 2800000, guid: 6c159bc44b6f0d54db7f3814bc23f060, type: 3}
+  - TextureStop: {fileID: 2800000, guid: 7a90f7cd2f3c3dc49bc749f1f5ce1bfb, type: 3}
+  - TextureStep: {fileID: 2800000, guid: 5828570b054cac741b8aae5dd2602566, type: 3}
+  - TextureSave: {fileID: 2800000, guid: 1a4e78236bae3df40ad00cb6d97163a6, type: 3}
+  - TextureHelp: {fileID: 2800000, guid: 0d363b6bdb2820449b63589c5d0366d3, type: 3}
+  - TextureTimeArrow: {fileID: 2800000, guid: 143d466de4b807f43ae0f2d798fe69d0, type: 3}
+  - EditorSkin: {fileID: 11400000, guid: 79e6c0b41c1a0c343aa9c7ad5b9626e0, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

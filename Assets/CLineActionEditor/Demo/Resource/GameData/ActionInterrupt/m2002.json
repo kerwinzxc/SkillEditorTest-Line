@@ -1,0 +1,166 @@
+
+{
+    "ActionInterrupts" : [
+        {
+            "InterruptName" : "Toidle",
+            "ActionID"      : "idle",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "idle"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Towalk",
+            "ActionID"      : "walk",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "walk"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk",
+            "ActionID"      : "atk",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "atk"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Tohit1",
+            "ActionID"      : "hit1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "hit1"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Tohit2",
+            "ActionID"      : "hit2",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "hit2"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Todead",
+            "ActionID"      : "dead",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckDead"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Tohitout1",
+            "ActionID"      : "hitout1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "hitout1"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Tohitout2",
+            "ActionID"      : "hitout2",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "hitout2"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Tohitout3",
+            "ActionID"      : "hitout3",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckOnGround",
+                    "OnGround"      : false
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Tohitout4",
+            "ActionID"      : "hitout4",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "hitout4"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Tohitup",
+            "ActionID"      : "hitup",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckOnGround",
+                    "OnGround"      : true
+                }
+            ]
+        }
+    ]
+}

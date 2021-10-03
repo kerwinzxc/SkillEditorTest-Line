@@ -1,0 +1,258 @@
+fileFormatVersion: 2
+guid: 5bea479eeaa765e439b0f546237c6e21
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Head
+    100004: Bip001 L Calf
+    100006: Bip001 L Clavicle
+    100008: Bip001 L Finger0
+    100010: Bip001 L Finger01
+    100012: Bip001 L Finger1
+    100014: Bip001 L Finger11
+    100016: Bip001 L Foot
+    100018: Bip001 L Forearm
+    100020: Bip001 L Hand
+    100022: Bip001 L Thigh
+    100024: Bip001 L Toe0
+    100026: Bip001 L UpperArm
+    100028: Bip001 Neck
+    100030: Bip001 Pelvis
+    100032: Bip001 R Calf
+    100034: Bip001 R Clavicle
+    100036: Bip001 R Finger0
+    100038: Bip001 R Finger01
+    100040: Bip001 R Finger1
+    100042: Bip001 R Finger11
+    100044: Bip001 R Foot
+    100046: Bip001 R Forearm
+    100048: Bip001 R Hand
+    100050: Bip001 R Thigh
+    100052: Bip001 R Toe0
+    100054: Bip001 R UpperArm
+    100056: Bip001 Spine
+    100058: Bip001 Spine1
+    100060: Bujiang
+    100062: Bujiang_L_Zhuazi
+    100064: Bujiang_R_Zhuazi
+    100066: dummy_behurt
+    100068: dummy_body
+    100070: dummy_head
+    100072: dummy_l_foot
+    100074: dummy_l_hand
+    100076: dummy_l_weapon
+    100078: dummy_r_foot
+    100080: dummy_r_hand
+    100082: dummy_r_weapon
+    100084: dummy_root
+    100086: //RootNode
+    100088: Bip001 L Finger02
+    100090: Bip001 L Finger12
+    100092: Bip001 L Finger2
+    100094: Bip001 L Finger21
+    100096: Bip001 L Finger22
+    100098: Bip001 L Finger3
+    100100: Bip001 L Finger31
+    100102: Bip001 L Finger32
+    100104: Bip001 L Finger4
+    100106: Bip001 L Finger41
+    100108: Bip001 L Finger42
+    100110: Bip001 R Finger02
+    100112: Bip001 R Finger12
+    100114: Bip001 R Finger2
+    100116: Bip001 R Finger21
+    100118: Bip001 R Finger22
+    100120: Bip001 R Finger3
+    100122: Bip001 R Finger31
+    100124: Bip001 R Finger32
+    100126: Bip001 R Finger4
+    100128: Bip001 R Finger41
+    100130: Bip001 R Finger42
+    100132: kapo_body
+    100134: kapo_eye
+    100136: kapo_jewel
+    100138: kapo_l_zhuaizi_1_1
+    100140: kapo_l_zhuaizi_1_2
+    100142: kapo_r_zhuaizi_1_1
+    100144: kapo_r_zhuaizi_1_2
+    400000: Bip001
+    400002: Bip001 Head
+    400004: Bip001 L Calf
+    400006: Bip001 L Clavicle
+    400008: Bip001 L Finger0
+    400010: Bip001 L Finger01
+    400012: Bip001 L Finger1
+    400014: Bip001 L Finger11
+    400016: Bip001 L Foot
+    400018: Bip001 L Forearm
+    400020: Bip001 L Hand
+    400022: Bip001 L Thigh
+    400024: Bip001 L Toe0
+    400026: Bip001 L UpperArm
+    400028: Bip001 Neck
+    400030: Bip001 Pelvis
+    400032: Bip001 R Calf
+    400034: Bip001 R Clavicle
+    400036: Bip001 R Finger0
+    400038: Bip001 R Finger01
+    400040: Bip001 R Finger1
+    400042: Bip001 R Finger11
+    400044: Bip001 R Foot
+    400046: Bip001 R Forearm
+    400048: Bip001 R Hand
+    400050: Bip001 R Thigh
+    400052: Bip001 R Toe0
+    400054: Bip001 R UpperArm
+    400056: Bip001 Spine
+    400058: Bip001 Spine1
+    400060: Bujiang
+    400062: Bujiang_L_Zhuazi
+    400064: Bujiang_R_Zhuazi
+    400066: dummy_behurt
+    400068: dummy_body
+    400070: dummy_head
+    400072: dummy_l_foot
+    400074: dummy_l_hand
+    400076: dummy_l_weapon
+    400078: dummy_r_foot
+    400080: dummy_r_hand
+    400082: dummy_r_weapon
+    400084: dummy_root
+    400086: //RootNode
+    400088: Bip001 L Finger02
+    400090: Bip001 L Finger12
+    400092: Bip001 L Finger2
+    400094: Bip001 L Finger21
+    400096: Bip001 L Finger22
+    400098: Bip001 L Finger3
+    400100: Bip001 L Finger31
+    400102: Bip001 L Finger32
+    400104: Bip001 L Finger4
+    400106: Bip001 L Finger41
+    400108: Bip001 L Finger42
+    400110: Bip001 R Finger02
+    400112: Bip001 R Finger12
+    400114: Bip001 R Finger2
+    400116: Bip001 R Finger21
+    400118: Bip001 R Finger22
+    400120: Bip001 R Finger3
+    400122: Bip001 R Finger31
+    400124: Bip001 R Finger32
+    400126: Bip001 R Finger4
+    400128: Bip001 R Finger41
+    400130: Bip001 R Finger42
+    400132: kapo_body
+    400134: kapo_eye
+    400136: kapo_jewel
+    400138: kapo_l_zhuaizi_1_1
+    400140: kapo_l_zhuaizi_1_2
+    400142: kapo_r_zhuaizi_1_1
+    400144: kapo_r_zhuaizi_1_2
+    2300000: Bujiang_L_Zhuazi
+    2300002: Bujiang_R_Zhuazi
+    2300004: kapo_l_zhuaizi_1_1
+    2300006: kapo_l_zhuaizi_1_2
+    2300008: kapo_r_zhuaizi_1_1
+    2300010: kapo_r_zhuaizi_1_2
+    3300000: Bujiang_L_Zhuazi
+    3300002: Bujiang_R_Zhuazi
+    3300004: kapo_l_zhuaizi_1_1
+    3300006: kapo_l_zhuaizi_1_2
+    3300008: kapo_r_zhuaizi_1_1
+    3300010: kapo_r_zhuaizi_1_2
+    4300000: Bujiang
+    4300002: Bujiang_L_Zhuazi
+    4300004: Bujiang_R_Zhuazi
+    4300006: kapo_r_zhuaizi_1_1
+    4300008: kapo_r_zhuaizi_1_2
+    4300010: kapo_l_zhuaizi_1_1
+    4300012: kapo_l_zhuaizi_1_2
+    4300014: kapo_body
+    4300016: kapo_eye
+    4300018: kapo_jewel
+    9500000: //RootNode
+    13700000: Bujiang
+    13700002: kapo_body
+    13700004: kapo_eye
+    13700006: kapo_jewel
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 2
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

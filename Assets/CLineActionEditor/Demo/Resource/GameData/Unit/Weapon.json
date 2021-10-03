@@ -1,0 +1,28 @@
+
+{
+    "Property" : [
+        {
+            "ID" : "WQ01001",
+            "Name" : "\u91CD\u5251",
+            "Description" : "",
+            "Prefab"      : "/prefabs/weapon/weapon01001.prefab",
+            "SetupAction" : "",
+            "ManShowAction" : "",
+            "WomanShowAction" : "",
+            "AttachDummyIdle" : "dummy_weapon_idle",
+            "AttachDummyAttackL" : "dummy_weapon_attack_l",
+            "AttachDummyAttackR" : "dummy_weapon_attack_r",
+            "PositionOffset"     : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+            },
+            "WeaponType"         : "EWT_Sword",
+            "IsDribble"          : true,
+            "DeadType"           : "EDT_Normal",
+            "ShowPrefab"         : "",
+            "ActionList"         : [
+            ]
+        }
+    ]
+}

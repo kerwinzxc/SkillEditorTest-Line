@@ -1,0 +1,64 @@
+
+{
+    "Property" : [
+        {
+            "ID" : "AI_idle",
+            "Name" : "AI_idle",
+            "Description" : "",
+            "Order"       : 1000,
+            "ActionID"    : "",
+            "RandomWeight" : 50,
+            "Conditions"   : [
+                {
+                    "ConditionType" : "EAT_CheckAITargetIsNull"
+                }
+            ]
+        },
+        {
+            "ID" : "AI_walk",
+            "Name" : "AI_walk",
+            "Description" : "",
+            "Order"       : 800,
+            "ActionID"    : "",
+            "RandomWeight" : 50,
+            "Conditions"   : [
+                {
+                    "ConditionType" : "EAT_CheckAITargetNotNull"
+                },
+                {
+                    "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                    "Property"      : "AttackDist",
+                    "CompareType"   : "ECT_Greater"
+                }
+            ]
+        },
+        {
+            "ID" : "AI_atk",
+            "Name" : "AI_atk",
+            "Description" : "",
+            "Order"       : 500,
+            "ActionID"    : "",
+            "RandomWeight" : 50,
+            "Conditions"   : [
+                {
+                    "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                    "Property"      : "AttackDist",
+                    "CompareType"   : "ECT_LessEqual"
+                }
+            ]
+        },
+        {
+            "ID" : "AI_dead",
+            "Name" : "AI_dead",
+            "Description" : "",
+            "Order"       : 1,
+            "ActionID"    : "",
+            "RandomWeight" : 50,
+            "Conditions"   : [
+                {
+                    "ConditionType" : "EAT_CheckAIDead"
+                }
+            ]
+        }
+    ]
+}

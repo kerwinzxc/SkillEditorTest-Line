@@ -1,0 +1,359 @@
+
+{
+    "ActionInterrupts" : [
+        {
+            "InterruptName" : "Toidle",
+            "ActionID"      : "idle",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "idle"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toidle2",
+            "ActionID"      : "idle2",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "idle2"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Towalk",
+            "ActionID"      : "walk",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "walk"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Todie",
+            "ActionID"      : "die",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "die"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Todie1",
+            "ActionID"      : "die1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "die1"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk_a",
+            "ActionID"      : "atk_a",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "atk_a"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk_b",
+            "ActionID"      : "atk_b",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "atk_b"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk_c",
+            "ActionID"      : "atk_c",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "atk_c"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitNormal1",
+            "ActionID"      : "HitNormal1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitNormal1"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitNormal2",
+            "ActionID"      : "HitNormal2",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitNormal2"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitNormal3",
+            "ActionID"      : "HitNormal3",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitNormal3"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockDown1",
+            "ActionID"      : "HitKnockDown1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockDown1"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockOut_k1",
+            "ActionID"      : "HitKnockOut_k1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockOut_k1"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockOut_k2",
+            "ActionID"      : "HitKnockOut_k2",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockOut_k2"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockOut_k3",
+            "ActionID"      : "HitKnockOut_k3",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockOut_k3"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockOut_k4",
+            "ActionID"      : "HitKnockOut_k4",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockOut_k4"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockOut_k5",
+            "ActionID"      : "HitKnockOut_k5",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockOut_k5"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockOut_a",
+            "ActionID"      : "HitKnockOut_a",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockOut_a"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockOut_b",
+            "ActionID"      : "HitKnockOut_b",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockOut_b"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockBack1",
+            "ActionID"      : "HitKnockBack1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockBack1"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockBack2",
+            "ActionID"      : "HitKnockBack2",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockBack2"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "ToHitKnockBack3",
+            "ActionID"      : "HitKnockBack3",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "HitAction",
+                    "CompareVal"    : "HitKnockBack3"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Tohit_downing",
+            "ActionID"      : "hit_downing",
+            "Enabled"       : false,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+            ]
+        },
+        {
+            "InterruptName" : "Tohit_down",
+            "ActionID"      : "hit_down",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckOnGround",
+                    "OnGround"      : true
+                }
+            ]
+        }
+    ]
+}
