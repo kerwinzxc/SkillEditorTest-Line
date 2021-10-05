@@ -28,6 +28,7 @@ namespace CAE.Core
         private GameObject mLoadingPanel = null;
         private UIProgressBar mLoadingProgress = null;
         private string mSceneName = string.Empty;
+        private bool mIsSceneLoaded = false;
 
         public EGameStateType StateType
         {
@@ -56,6 +57,8 @@ namespace CAE.Core
             mLoadingProgress.Progress = 0f;
 
             mSceneName = (string)context[0];
+            
+            mIsSceneLoaded = false;
             HelperAsynLoading.Instance.LoadSceneAsyn(mSceneName, onSceneLoading, onSceneLoaded);
         }
 
@@ -67,6 +70,18 @@ namespace CAE.Core
         public void Update(float fTick)
         {
             HelperAsynLoading.Instance.Update(fTick);
+
+            if (mIsSceneLoaded)
+            {
+                if (UnitMgr.Instance.GetUnitCount(Unit.EUnitType.EUT_Monster) == 0)
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        var pos = new Vector3(Random.Range(-4, 4), 0, Random.Range(8, 16));
+                        UnitMgr.Instance.CreateUnit(Unit.EUnitType.EUT_Monster, "1", pos, 0, ECampType.EFT_Enemy);
+                    }
+                }
+            }
         }
 
         public void FixedUpdate(float fTick)
@@ -101,9 +116,7 @@ namespace CAE.Core
 
                         // 添加天赋 - 移动速度+10%
                         p.AddBuff("1");
-
-                        UnitMgr.Instance.CreateUnit(Unit.EUnitType.EUT_Monster, "1", new Vector3(0, 0, 12f), 0, ECampType.EFT_Enemy);
-
+                        
                         AudioMgr.Instance.PlayMusic("/Prefabs/Audio/bgm_battle1.prefab", true, 5f);
                     }
                     break;
@@ -122,6 +135,7 @@ namespace CAE.Core
             mLoadingPanel = null;
 
             InputMgr.Instance.EnableInput = true;
+            mIsSceneLoaded = true;
         }
     }
 }

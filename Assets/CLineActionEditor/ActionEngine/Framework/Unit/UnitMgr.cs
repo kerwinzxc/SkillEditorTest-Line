@@ -130,6 +130,17 @@ namespace CAE.Core
             mHandleList.Clear();
         }
 
+        public int GetUnitCount(Unit.EUnitType type)
+        {
+            var count = 0;
+            foreach (var unit in mUpdateList)
+            {
+                if (unit.UnitType == type)
+                    count++;
+            }
+            return count;
+        }
+
         public void FixedUpdate(float fTick)
         {
 
