@@ -135,7 +135,6 @@ namespace CAE.Core
         protected void KeepAttack()
         {
             int attackcount = (int)CustomPropertyHash[CustomProperty.sAttackCounting].Value;
-            Debug.LogError("count: " + attackcount);
             int count = attackcount;
             //if (ActionStatus.ActiveAction.ActionStatus != EActionState.Attack && attackcount == 0)
             if (attackcount == 0)
@@ -165,7 +164,6 @@ namespace CAE.Core
                 }
             }
 
-            Debug.LogError("CustomProperty.sAttackCount 222: " + count );
             CustomPropertyHash[CustomProperty.sAttackCounting].Value = count;
             CustomPropertyHash[CustomProperty.sAttackCount].Value = count;
             CustomPropertyHash[CustomProperty.sInputAttack].Value = true;

@@ -57,7 +57,6 @@ namespace CAE.Core
 
         void Start()
         {
-            Time.timeScale = 0.25f;
             GameStateMgr.Instance.ChangeState(EGameStateType.EGST_Main);
         }
 
