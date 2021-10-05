@@ -68,7 +68,7 @@ namespace CAE.Core
 
         public void ExecuteOnActionEnd(Unit unit)
         {
-            Execute(unit);
+            // Execute(unit);
         }
 
         public void Execute(Unit unit)
@@ -87,7 +87,6 @@ namespace CAE.Core
             }
             else if (mProperty == CustomProperty.sAttackCount)
             {
-                Debug.LogError("CustomProperty.sAttackCount 111: " + mValInt);
                 unit.CustomPropertyHash[CustomProperty.sAttackCounting].Value = mValInt;
                 unit.CustomPropertyHash[CustomProperty.sAttackCount].Value = mValInt;
                 unit.CustomPropertyHash[CustomProperty.sInputAttack].Value = (mValInt != 0 ? true : false);
