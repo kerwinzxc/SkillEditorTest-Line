@@ -283,8 +283,8 @@ namespace SuperCLine.ActionEngine.Editor
                         {
                             if (actorTreeViewAction != null)
                             {
-                                UnityEditor.Animations.AnimatorState state = UnitWrapper.Instance.StateHash[epa.AnimName];
-                                length = state.motion.averageDuration;
+                                var state = UnitWrapper.Instance.StateHash[epa.AnimName];
+                                length = state.Length;
                             }
                         });
                     }

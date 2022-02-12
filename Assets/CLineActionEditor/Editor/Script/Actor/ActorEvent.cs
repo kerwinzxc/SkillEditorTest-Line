@@ -306,8 +306,8 @@ namespace SuperCLine.ActionEngine.Editor
             {
                 if (!string.IsNullOrEmpty(epa.AnimName) && UnitWrapper.Instance.StateHash.ContainsKey(epa.AnimName))
                 {
-                    UnityEditor.Animations.AnimatorState state = UnitWrapper.Instance.StateHash[epa.AnimName];
-                    duration = state.motion.averageDuration;
+                    var state = UnitWrapper.Instance.StateHash[epa.AnimName];
+                    duration = state.Length;
                 }
             }
 

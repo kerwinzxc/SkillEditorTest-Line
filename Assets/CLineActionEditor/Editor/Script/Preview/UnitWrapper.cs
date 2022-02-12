@@ -19,8 +19,6 @@
 namespace SuperCLine.ActionEngine
 {
     using UnityEngine;
-    using UnityEditor;
-    using UnityEditor.Animations;
     using System.Collections.Generic;
 
     public class UnitWrapper : Singleton<UnitWrapper>
@@ -29,12 +27,9 @@ namespace SuperCLine.ActionEngine
         private GameObject mUnit = null;
         private GameObject mWeapon = null;
         private WeaponProperty mWeaponProperty = null;
-        private Animator mAnim = null;
         private string mActionGroupName = string.Empty;
 
-        private List<string> mStateNameList = new List<string>();
-        private List<string> mParameterList = new List<string>();
-        private Dictionary<string, AnimatorState> mStateHash = new Dictionary<string, AnimatorState>();
+        private IUnitAnimator mAnimator;
 
         public bool IsReady
         {
@@ -48,17 +43,17 @@ namespace SuperCLine.ActionEngine
 
         public List<string> StateNameList
         {
-            get { return mStateNameList; }
+            get { return mAnimator.StateNameList; }
         }
 
         public List<string> ParameterList
         {
-            get { return mParameterList; }
+            get { return mAnimator.ParameterList; }
         }
 
-        public Dictionary<string, AnimatorState> StateHash
+        public Dictionary<string, UnitAnimatorData> StateHash
         {
-            get { return mStateHash; }
+            get { return mAnimator.StateHash; }
         }
 
         public GameObject UnitWrapperUnit
@@ -67,10 +62,10 @@ namespace SuperCLine.ActionEngine
             set { mUnit = value; }
         }
 
-        public Animator Anim
+        public IUnitAnimator Anim
         {
-            get { return mAnim; }
-            set { mAnim = value; }
+            get { return mAnimator; }
+            set { mAnimator = value; }
         }
 
         public GameObject EquipWeapon
@@ -79,7 +74,7 @@ namespace SuperCLine.ActionEngine
             set { mWeapon = value; }
         }
 
-        public bool BuildUnit(IProperty property)
+        public bool BuildUnit(IProperty property, string animatorTypeName)
         {
             string prefabname = string.Empty;
             if (mUnit != null)
@@ -113,7 +108,15 @@ namespace SuperCLine.ActionEngine
             }
 
             mUnit = GameObject.Instantiate(go, Vector3.zero, Quaternion.identity) as GameObject;
-            mAnim = mUnit.GetComponent<Animator>();
+            System.Type type = Utility.Assembly.GetType(animatorTypeName);
+            var ins = System.Activator.CreateInstance(type);
+            mAnimator = (IUnitAnimator) ins;
+            if (mAnimator == null)
+            {
+                LogMgr.Instance.Log(ELogType.ELT_ERROR, "ActionEditor", "IUnitAnimator is null.");
+                return false;
+            }
+            mAnimator.Init(mUnit);
 
             CameraMgr.Instance.BindCtrl(ECameraCtrlType.ECCT_SmoothFollow, mUnit.transform, 0.1f, 0.6f, new Vector3(0, 3.5f, -6.5f), new Vector3(20, 0, 0));
 
@@ -159,44 +162,28 @@ namespace SuperCLine.ActionEngine
 
         public void Tick(float fTick)
         {
-            if (mAnim != null)
+            if (mAnimator != null)
             {
-                mAnim.Update(fTick);
+                mAnimator.Update(fTick);
             }
         }
 
         public void PlayAnimation(string name)
         {
-            if (mAnim != null)
+            if (mAnimator != null)
             {
-                mAnim.Play(name, 0, 0);
+                mAnimator.Play(name);
             }
         }
 
         public void GetAllState()
         {
-            mStateNameList.Clear();
-            mStateHash.Clear();
-
-            AnimatorController ac = mAnim.runtimeAnimatorController as AnimatorController;
-            // TO CLine: more layer later
-            ChildAnimatorState[] stList = ac.layers[0].stateMachine.states;
-
-            for (int i = 0; i < stList.Length; ++i)
-            {
-                mStateNameList.Add(stList[i].state.name);
-                mStateHash.Add(stList[i].state.name, stList[i].state);
-            }
+            mAnimator.GetAllState();
         }
 
         public void GetAllParameter()
         {
-            mParameterList.Clear();
-
-            for (int i = 0; i < mAnim.parameters.Length; ++i)
-            {
-                mParameterList.Add(mAnim.parameters[i].name);
-            }
+            mAnimator.GetAllParameter();
         }
 
         public override void Init()

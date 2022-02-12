@@ -16,6 +16,8 @@
 |
 +-----------------------------------------------------------------------------*/
 
+using UnityEngine.Serialization;
+
 namespace SuperCLine.ActionEngine.Editor
 {
     using UnityEngine;
@@ -39,6 +41,7 @@ namespace SuperCLine.ActionEngine.Editor
         [SerializeField] private ELanguageType language = ELanguageType.CN;
         [SerializeField] private float playbackSpeed = 1f;
         [SerializeField] private bool prettyPrint = true;
+        [SerializeField] private string animatorTypeName = "SuperCLine.ActionEngine.UnitUnityAnimator";
         [SerializeReference] private ActorSplitter actorSplitter = null;
         [SerializeReference] private ActorTreeItem actorTreeView = null;
         [System.NonSerialized] private EToolState toolState = EToolState.Stop;
@@ -311,6 +314,14 @@ namespace SuperCLine.ActionEngine.Editor
                             language = ELanguageType.EN;
                         });
 
+                        foreach (var typeName in Utility.Type.GetRuntimeTypeNames(typeof(IUnitAnimator)))
+                        {
+                            menu.AddItem(new GUIContent("Animator/"+typeName), animatorTypeName == typeName, () =>
+                            {
+                                animatorTypeName = typeName;
+                            });
+                        }
+
                         menu.ShowAsContext();
                     }
                 }
@@ -325,6 +336,8 @@ namespace SuperCLine.ActionEngine.Editor
                 }
             }
         }
+        
+        
 
         private void DrawTreeView()
         {
