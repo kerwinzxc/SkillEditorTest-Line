@@ -11,46 +11,28 @@
             "ActionGroup"   : "m2001",
             "AISwitchs"     : [
                 {
-                    "ID" : "AI_idle",
-                    "Name" : "AI_idle",
+                    "ID" : "AI_dead",
+                    "Name" : "AI_dead",
                     "Description" : "",
-                    "Order"       : 1000,
-                    "ActionID"    : "idle",
+                    "Order"       : 1,
+                    "ActionID"    : "die",
                     "RandomWeight" : 50,
                     "Conditions"   : [
                         {
-                            "ConditionType" : "EAT_CheckAITargetIsNull"
+                            "ConditionType" : "EAT_CheckAIDead"
                         }
                     ]
                 },
                 {
-                    "ID" : "AI_idle2",
-                    "Name" : "AI_idle2",
+                    "ID" : "AI_dead1",
+                    "Name" : "AI_dead1",
                     "Description" : "",
-                    "Order"       : 1000,
-                    "ActionID"    : "idle2",
+                    "Order"       : 1,
+                    "ActionID"    : "die1",
                     "RandomWeight" : 50,
                     "Conditions"   : [
                         {
-                            "ConditionType" : "EAT_CheckAITargetIsNull"
-                        }
-                    ]
-                },
-                {
-                    "ID" : "AI_walk",
-                    "Name" : "AI_walk",
-                    "Description" : "",
-                    "Order"       : 800,
-                    "ActionID"    : "walk",
-                    "RandomWeight" : 50,
-                    "Conditions"   : [
-                        {
-                            "ConditionType" : "EAT_CheckAITargetNotNull"
-                        },
-                        {
-                            "ConditionType" : "EAT_CheckAIDistCustomProperty",
-                            "Property"      : "AttackDist",
-                            "CompareType"   : "ECT_Greater"
+                            "ConditionType" : "EAT_CheckAIDead"
                         }
                     ]
                 },
@@ -100,28 +82,64 @@
                     ]
                 },
                 {
-                    "ID" : "AI_dead",
-                    "Name" : "AI_dead",
+                    "ID" : "AI_walk",
+                    "Name" : "AI_walk",
                     "Description" : "",
-                    "Order"       : 1,
-                    "ActionID"    : "die",
+                    "Order"       : 800,
+                    "ActionID"    : "walk",
                     "RandomWeight" : 50,
                     "Conditions"   : [
                         {
-                            "ConditionType" : "EAT_CheckAIDead"
+                            "ConditionType" : "EAT_CheckAITargetNotNull"
+                        },
+                        {
+                            "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                            "Property"      : "AttackDist",
+                            "CompareType"   : "ECT_Greater"
+                        },
+                        {
+                            "ConditionType" : "EAT_CheckAIChase"
                         }
                     ]
                 },
                 {
-                    "ID" : "AI_dead1",
-                    "Name" : "AI_dead1",
+                    "ID" : "AI_patrol",
+                    "Name" : "AI_patrol",
                     "Description" : "",
-                    "Order"       : 1,
-                    "ActionID"    : "die1",
+                    "Order"       : 950,
+                    "ActionID"    : "walk",
+                    "RandomWeight" : 0,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAIPatrol",
+                            "Range"         : 5.0,
+                            "Random"        : 30
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_idle",
+                    "Name" : "AI_idle",
+                    "Description" : "",
+                    "Order"       : 1000,
+                    "ActionID"    : "idle",
                     "RandomWeight" : 50,
                     "Conditions"   : [
                         {
-                            "ConditionType" : "EAT_CheckAIDead"
+                            "ConditionType" : "EAT_CheckAITargetIsNull"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_idle2",
+                    "Name" : "AI_idle2",
+                    "Description" : "",
+                    "Order"       : 1000,
+                    "ActionID"    : "idle2",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAITargetIsNull"
                         }
                     ]
                 }
@@ -137,33 +155,15 @@
             "ActionGroup"   : "m2002",
             "AISwitchs"     : [
                 {
-                    "ID" : "AI_idle",
-                    "Name" : "AI_idle",
+                    "ID" : "AI_dead",
+                    "Name" : "AI_dead",
                     "Description" : "",
-                    "Order"       : 1000,
-                    "ActionID"    : "idle",
+                    "Order"       : 1,
+                    "ActionID"    : "dead",
                     "RandomWeight" : 50,
                     "Conditions"   : [
                         {
-                            "ConditionType" : "EAT_CheckAITargetIsNull"
-                        }
-                    ]
-                },
-                {
-                    "ID" : "AI_walk",
-                    "Name" : "AI_walk",
-                    "Description" : "",
-                    "Order"       : 800,
-                    "ActionID"    : "walk",
-                    "RandomWeight" : 50,
-                    "Conditions"   : [
-                        {
-                            "ConditionType" : "EAT_CheckAITargetNotNull"
-                        },
-                        {
-                            "ConditionType" : "EAT_CheckAIDistCustomProperty",
-                            "Property"      : "AttackDist",
-                            "CompareType"   : "ECT_Greater"
+                            "ConditionType" : "EAT_CheckAIDead"
                         }
                     ]
                 },
@@ -183,15 +183,36 @@
                     ]
                 },
                 {
-                    "ID" : "AI_dead",
-                    "Name" : "AI_dead",
+                    "ID" : "AI_walk",
+                    "Name" : "AI_walk",
                     "Description" : "",
-                    "Order"       : 1,
-                    "ActionID"    : "dead",
+                    "Order"       : 800,
+                    "ActionID"    : "walk",
                     "RandomWeight" : 50,
                     "Conditions"   : [
                         {
-                            "ConditionType" : "EAT_CheckAIDead"
+                            "ConditionType" : "EAT_CheckAITargetNotNull"
+                        },
+                        {
+                            "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                            "Property"      : "AttackDist",
+                            "CompareType"   : "ECT_Greater"
+                        },
+                        {
+                            "ConditionType" : "EAT_CheckAIChase"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_idle",
+                    "Name" : "AI_idle",
+                    "Description" : "",
+                    "Order"       : 1000,
+                    "ActionID"    : "idle",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAITargetIsNull"
                         }
                     ]
                 }

@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-namespace Xft
-{
+namespace XftWeapon {
     public class Spline
     {
 
@@ -44,7 +43,7 @@ namespace Xft
 
         public SplineControlPoint NextControlPoint(SplineControlPoint controlpoint)
         {
-            if (mControlPoints.Count == 0) return null;
+            if (mControlPoints.Count == 0) return null; 
 
             int i = controlpoint.ControlPointIndex + 1;
             if (i >= mControlPoints.Count)

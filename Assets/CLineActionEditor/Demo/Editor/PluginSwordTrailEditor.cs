@@ -1,28 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
-using Xft;
+#if USE_PLUGINWEAPONTRAIL
+using PluginWeaponTrail;
 
 [CustomEditor(typeof(XWeaponTrail))]
+#endif
 [CanEditMultipleObjects]
-public class XWeaponTrailEditor : Editor
+public class PluginSwordTrailEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-
-
         EditorGUILayout.BeginVertical();
-        EditorGUILayout.LabelField("Version: " + XWeaponTrail.Version);
-        EditorGUILayout.LabelField("Email: shallwaycn@gmail.com");
-        //EditorGUILayout.LabelField("Web: http://phantomparticle.org");
+        EditorGUILayout.LabelField("Please Buy And Support Official Version!!!");
         EditorGUILayout.EndVertical();
 
-        GUI.color = Color.green;
-        EditorGUILayout.LabelField("Please check out our new assets");
-        if (GUILayout.Button("Phantom Particle", GUILayout.Height(32)))
-        {
-            Application.OpenURL("https://www.assetstore.unity3d.com/en/#!/content/56597");
-        }
         GUI.color = Color.white;
 
         GUILayout.Space(10);

@@ -17,120 +17,172 @@
             "DefaultAction" : "",
             "Events"        : [
                 {
+                    "TrackName" : "Idle_R",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 0,
+                    "Duration"    : 1000,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "Idle_R",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "1"
+                    }
                 }
             ],
             "Interrupts"    : [
                 {
-                    "InterruptName" : "Todead",
-                    "ActionID"      : "dead",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "1",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckDead"
-                        }
-                    ]
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toatk",
-                    "ActionID"      : "atk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "2",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "atk"
-                        }
-                    ]
+                    "TrackName" : "Toatk",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "atk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit1",
-                    "ActionID"      : "hit1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "3",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hit1"
-                        }
-                    ]
+                    "TrackName" : "Tohit1",
+                    "TrackIndex" : 2,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit1",
+                        "ActionID"      : "hit1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hit1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit2",
-                    "ActionID"      : "hit2",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "4",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hit2"
-                        }
-                    ]
+                    "TrackName" : "Tohit2",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit2",
+                        "ActionID"      : "hit2",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hit2"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohitout1",
-                    "ActionID"      : "hitout1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "7",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hitout1"
-                        }
-                    ]
+                    "TrackName" : "Tohitout1",
+                    "TrackIndex" : 4,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohitout1",
+                        "ActionID"      : "hitout1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hitout1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Towalk",
-                    "ActionID"      : "walk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "5",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "walk"
-                        }
-                    ]
+                    "TrackName" : "Towalk",
+                    "TrackIndex" : 5,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Towalk",
+                        "ActionID"      : "walk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "walk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toidle",
-                    "ActionID"      : "idle",
-                    "Enabled"       : true,
-                    "InterruptTime" : 994,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "6",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "idle"
-                        }
-                    ]
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 6,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 994,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "idle"
+                            }
+                        ]
+                    }
                 }
             ],
             "AttackDefs"    : [
@@ -152,120 +204,172 @@
             "DefaultAction" : "",
             "Events"        : [
                 {
+                    "TrackName" : "Walk_R",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 0,
+                    "Duration"    : 800,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "Walk_R",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "1"
+                    }
                 }
             ],
             "Interrupts"    : [
                 {
-                    "InterruptName" : "Todead",
-                    "ActionID"      : "dead",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "1",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckDead"
-                        }
-                    ]
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toatk",
-                    "ActionID"      : "atk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "2",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "atk"
-                        }
-                    ]
+                    "TrackName" : "Toatk",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "atk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit1",
-                    "ActionID"      : "hit1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "3",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hit1"
-                        }
-                    ]
+                    "TrackName" : "Tohit1",
+                    "TrackIndex" : 2,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit1",
+                        "ActionID"      : "hit1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hit1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit2",
-                    "ActionID"      : "hit2",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "4",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hit2"
-                        }
-                    ]
+                    "TrackName" : "Tohit2",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit2",
+                        "ActionID"      : "hit2",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hit2"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohitout1",
-                    "ActionID"      : "hitout1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "7",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hitout1"
-                        }
-                    ]
+                    "TrackName" : "Tohitout1",
+                    "TrackIndex" : 4,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohitout1",
+                        "ActionID"      : "hitout1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hitout1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Towalk",
-                    "ActionID"      : "walk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 794,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "5",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "walk"
-                        }
-                    ]
+                    "TrackName" : "Towalk",
+                    "TrackIndex" : 5,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 794,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Towalk",
+                        "ActionID"      : "walk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "walk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toidle",
-                    "ActionID"      : "idle",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "6",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "idle"
-                        }
-                    ]
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 6,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "idle"
+                            }
+                        ]
+                    }
                 }
             ],
             "AttackDefs"    : [
@@ -287,131 +391,186 @@
             "DefaultAction" : "",
             "Events"        : [
                 {
+                    "TrackName" : "Attack_R",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 0,
+                    "Duration"    : 767,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "Attack_R",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "1"
+                    }
                 },
                 {
+                    "TrackName" : "Idle_R",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 768,
+                    "Duration"    : 0,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "Idle_R",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "2"
+                    }
                 }
             ],
             "Interrupts"    : [
                 {
-                    "InterruptName" : "Todead",
-                    "ActionID"      : "dead",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "1",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckDead"
-                        }
-                    ]
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toatk",
-                    "ActionID"      : "atk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 1710,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "2",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "atk"
-                        }
-                    ]
+                    "TrackName" : "Toatk",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 1710,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "atk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit1",
-                    "ActionID"      : "hit1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "3",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hit1"
-                        }
-                    ]
+                    "TrackName" : "Tohit1",
+                    "TrackIndex" : 2,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit1",
+                        "ActionID"      : "hit1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hit1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit2",
-                    "ActionID"      : "hit2",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "4",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hit2"
-                        }
-                    ]
+                    "TrackName" : "Tohit2",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit2",
+                        "ActionID"      : "hit2",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hit2"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohitout1",
-                    "ActionID"      : "hitout1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "7",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hitout1"
-                        }
-                    ]
+                    "TrackName" : "Tohitout1",
+                    "TrackIndex" : 4,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohitout1",
+                        "ActionID"      : "hitout1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hitout1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Towalk",
-                    "ActionID"      : "walk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 751,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "5",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "walk"
-                        }
-                    ]
+                    "TrackName" : "Towalk",
+                    "TrackIndex" : 5,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 751,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Towalk",
+                        "ActionID"      : "walk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "walk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toidle",
-                    "ActionID"      : "idle",
-                    "Enabled"       : true,
-                    "InterruptTime" : 754,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "6",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "idle"
-                        }
-                    ]
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 6,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 754,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "idle"
+                            }
+                        ]
+                    }
                 }
             ],
             "AttackDefs"    : [
@@ -433,132 +592,184 @@
             "DefaultAction" : "",
             "Events"        : [
                 {
+                    "TrackName" : "NormalHit02_R",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 0,
+                    "Duration"    : 367,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "NormalHit02_R",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "1"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 354,
-                    "EventType"   : "EET_SetCustomProperty",
+                    "Duration"    : 0,
+                    "EventType"   : "EET_SetCustomPropertyString",
                     "EventData"   : {
                         "Property" : "HitAction",
-                        "ValBool"  : false,
-                        "ValInt"   : 0,
-                        "ValFloat" : 0.0,
-                        "ValString" : ""
-                    },
-                    "ActorID"     : "1"
+                        "Val"      : ""
+                    }
                 }
             ],
             "Interrupts"    : [
                 {
-                    "InterruptName" : "Todead",
-                    "ActionID"      : "dead",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "1",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckDead"
-                        }
-                    ]
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohitout1",
-                    "ActionID"      : "hitout1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "7",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hitout1"
-                        }
-                    ]
+                    "TrackName" : "Tohitout1",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohitout1",
+                        "ActionID"      : "hitout1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hitout1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toatk",
-                    "ActionID"      : "atk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 360,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "2",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "atk"
-                        }
-                    ]
+                    "TrackName" : "Toatk",
+                    "TrackIndex" : 2,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 360,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "atk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit1",
-                    "ActionID"      : "hit1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 360,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "3",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hit1"
-                        }
-                    ]
+                    "TrackName" : "Tohit1",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 360,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit1",
+                        "ActionID"      : "hit1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hit1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit2",
-                    "ActionID"      : "hit2",
-                    "Enabled"       : true,
-                    "InterruptTime" : 360,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "4",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hit2"
-                        }
-                    ]
+                    "TrackName" : "Tohit2",
+                    "TrackIndex" : 4,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 360,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit2",
+                        "ActionID"      : "hit2",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hit2"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Towalk",
-                    "ActionID"      : "walk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 360,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "5",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "walk"
-                        }
-                    ]
+                    "TrackName" : "Towalk",
+                    "TrackIndex" : 5,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 360,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Towalk",
+                        "ActionID"      : "walk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "walk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toidle",
-                    "ActionID"      : "idle",
-                    "Enabled"       : true,
-                    "InterruptTime" : 360,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "6",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "idle"
-                        }
-                    ]
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 6,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 360,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "idle"
+                            }
+                        ]
+                    }
                 }
             ],
             "AttackDefs"    : [
@@ -580,132 +791,184 @@
             "DefaultAction" : "",
             "Events"        : [
                 {
+                    "TrackName" : "BackHit_R",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 0,
+                    "Duration"    : 667,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "BackHit_R",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "1"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 656,
-                    "EventType"   : "EET_SetCustomProperty",
+                    "Duration"    : 0,
+                    "EventType"   : "EET_SetCustomPropertyString",
                     "EventData"   : {
                         "Property" : "HitAction",
-                        "ValBool"  : false,
-                        "ValInt"   : 0,
-                        "ValFloat" : 0.0,
-                        "ValString" : ""
-                    },
-                    "ActorID"     : "1"
+                        "Val"      : ""
+                    }
                 }
             ],
             "Interrupts"    : [
                 {
-                    "InterruptName" : "Todead",
-                    "ActionID"      : "dead",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "1",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckDead"
-                        }
-                    ]
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohitout1",
-                    "ActionID"      : "hitout1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "7",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hitout1"
-                        }
-                    ]
+                    "TrackName" : "Tohitout1",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohitout1",
+                        "ActionID"      : "hitout1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hitout1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toatk",
-                    "ActionID"      : "atk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 660,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "2",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "atk"
-                        }
-                    ]
+                    "TrackName" : "Toatk",
+                    "TrackIndex" : 2,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 660,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "atk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit1",
-                    "ActionID"      : "hit1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 660,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "3",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hit1"
-                        }
-                    ]
+                    "TrackName" : "Tohit1",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 660,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit1",
+                        "ActionID"      : "hit1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hit1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit2",
-                    "ActionID"      : "hit2",
-                    "Enabled"       : true,
-                    "InterruptTime" : 660,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "4",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hit2"
-                        }
-                    ]
+                    "TrackName" : "Tohit2",
+                    "TrackIndex" : 4,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 660,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit2",
+                        "ActionID"      : "hit2",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hit2"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Towalk",
-                    "ActionID"      : "walk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 660,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "5",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "walk"
-                        }
-                    ]
+                    "TrackName" : "Towalk",
+                    "TrackIndex" : 5,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 660,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Towalk",
+                        "ActionID"      : "walk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "walk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toidle",
-                    "ActionID"      : "idle",
-                    "Enabled"       : true,
-                    "InterruptTime" : 660,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "6",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "idle"
-                        }
-                    ]
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 6,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 660,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "idle"
+                            }
+                        ]
+                    }
                 }
             ],
             "AttackDefs"    : [
@@ -727,7 +990,11 @@
             "DefaultAction" : "",
             "Events"        : [
                 {
+                    "TrackName" : "fx_dead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 0,
+                    "Duration"    : 0,
                     "EventType"   : "EET_PlayEffect",
                     "EventData"   : {
                         "EffectName" : "/prefabs/effect/misc/fx_dead.prefab",
@@ -749,11 +1016,14 @@
                         "UseRandom"   : false,
                         "RandomEffectList" : [
                         ]
-                    },
-                    "ActorID"     : "1"
+                    }
                 },
                 {
+                    "TrackName" : "hit",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 0,
+                    "Duration"    : 0,
                     "EventType"   : "EET_PlaySound",
                     "EventData"   : {
                         "SoundName" : "/prefabs/audio/m2002/hit.prefab",
@@ -762,24 +1032,29 @@
                         "UseRandom"     : false,
                         "RandomSoundList" : [
                         ]
-                    },
-                    "ActorID"     : "1"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 0,
+                    "Duration"    : 0,
                     "EventType"   : "EET_DelUnit",
                     "EventData"   : {
                         "Delete" : false
-                    },
-                    "ActorID"     : "1"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 9998,
+                    "Duration"    : 0,
                     "EventType"   : "EET_DelUnit",
                     "EventData"   : {
                         "Delete" : true
-                    },
-                    "ActorID"     : "1"
+                    }
                 }
             ],
             "Interrupts"    : [
@@ -803,18 +1078,25 @@
             "DefaultAction" : "",
             "Events"        : [
                 {
+                    "TrackName" : "KnockInAir_R_LV1",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 0,
+                    "Duration"    : 133,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "KnockInAir_R_LV1",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "1"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 0,
+                    "Duration"    : 0,
                     "EventType"   : "EET_Move",
                     "EventData"   : {
                         "IgnorMove" : false,
@@ -835,11 +1117,14 @@
                             "y" : 0.0,
                             "z" : 0.0
                         }
-                    },
-                    "ActorID"     : "2"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 130,
+                    "Duration"    : 0,
                     "EventType"   : "EET_Move",
                     "EventData"   : {
                         "IgnorMove" : true,
@@ -860,50 +1145,63 @@
                             "y" : 0.0,
                             "z" : 0.0
                         }
-                    },
-                    "ActorID"     : "2"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 465,
-                    "EventType"   : "EET_SetCustomProperty",
+                    "Duration"    : 0,
+                    "EventType"   : "EET_SetCustomPropertyString",
                     "EventData"   : {
                         "Property" : "HitAction",
-                        "ValBool"  : false,
-                        "ValInt"   : 0,
-                        "ValFloat" : 0.0,
-                        "ValString" : ""
-                    },
-                    "ActorID"     : "1"
+                        "Val"      : ""
+                    }
                 }
             ],
             "Interrupts"    : [
                 {
-                    "InterruptName" : "Todead",
-                    "ActionID"      : "dead",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "2",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckDead"
-                        }
-                    ]
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohitout2",
-                    "ActionID"      : "hitout2",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "1",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hitout2"
-                        }
-                    ]
+                    "TrackName" : "Tohitout2",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohitout2",
+                        "ActionID"      : "hitout2",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hitout2"
+                            }
+                        ]
+                    }
                 }
             ],
             "AttackDefs"    : [
@@ -925,18 +1223,25 @@
             "DefaultAction" : "",
             "Events"        : [
                 {
+                    "TrackName" : "KnockInAir_R_LV2",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 0,
+                    "Duration"    : 167,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "KnockInAir_R_LV2",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "1"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 0,
+                    "Duration"    : 0,
                     "EventType"   : "EET_Move",
                     "EventData"   : {
                         "IgnorMove" : false,
@@ -957,11 +1262,14 @@
                             "y" : 0.0,
                             "z" : 0.0
                         }
-                    },
-                    "ActorID"     : "2"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 160,
+                    "Duration"    : 0,
                     "EventType"   : "EET_Move",
                     "EventData"   : {
                         "IgnorMove" : false,
@@ -982,49 +1290,62 @@
                             "y" : 0.0,
                             "z" : 0.0
                         }
-                    },
-                    "ActorID"     : "2"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 451,
-                    "EventType"   : "EET_SetCustomProperty",
+                    "Duration"    : 0,
+                    "EventType"   : "EET_SetCustomPropertyString",
                     "EventData"   : {
                         "Property" : "HitAction",
-                        "ValBool"  : false,
-                        "ValInt"   : 0,
-                        "ValFloat" : 0.0,
-                        "ValString" : ""
-                    },
-                    "ActorID"     : "1"
+                        "Val"      : ""
+                    }
                 }
             ],
             "Interrupts"    : [
                 {
-                    "InterruptName" : "Todead",
-                    "ActionID"      : "dead",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "2",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckDead"
-                        }
-                    ]
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohitout3",
-                    "ActionID"      : "hitout3",
-                    "Enabled"       : true,
-                    "InterruptTime" : 167,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "1",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckOnGround",
-                            "OnGround"      : false
-                        }
-                    ]
+                    "TrackName" : "Tohitout3",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 167,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohitout3",
+                        "ActionID"      : "hitout3",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckOnGround",
+                                "OnGround"      : false
+                            }
+                        ]
+                    }
                 }
             ],
             "AttackDefs"    : [
@@ -1046,18 +1367,25 @@
             "DefaultAction" : "hitup",
             "Events"        : [
                 {
+                    "TrackName" : "KnockInAir_R_LV3",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 0,
+                    "Duration"    : 700,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "KnockInAir_R_LV3",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "1"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 0,
+                    "Duration"    : 0,
                     "EventType"   : "EET_Move",
                     "EventData"   : {
                         "IgnorMove" : false,
@@ -1078,11 +1406,14 @@
                             "y" : 0.0,
                             "z" : 0.0
                         }
-                    },
-                    "ActorID"     : "2"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 349,
+                    "Duration"    : 0,
                     "EventType"   : "EET_Move",
                     "EventData"   : {
                         "IgnorMove" : false,
@@ -1103,50 +1434,63 @@
                             "y" : 0.0,
                             "z" : 0.0
                         }
-                    },
-                    "ActorID"     : "2"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 691,
-                    "EventType"   : "EET_SetCustomProperty",
+                    "Duration"    : 0,
+                    "EventType"   : "EET_SetCustomPropertyString",
                     "EventData"   : {
                         "Property" : "HitAction",
-                        "ValBool"  : false,
-                        "ValInt"   : 0,
-                        "ValFloat" : 0.0,
-                        "ValString" : ""
-                    },
-                    "ActorID"     : "1"
+                        "Val"      : ""
+                    }
                 }
             ],
             "Interrupts"    : [
                 {
-                    "InterruptName" : "Todead",
-                    "ActionID"      : "dead",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "3",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckDead"
-                        }
-                    ]
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohitout4",
-                    "ActionID"      : "hitout4",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "4",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "HitAction",
-                            "CompareVal"    : "hitout4"
-                        }
-                    ]
+                    "TrackName" : "Tohitout4",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohitout4",
+                        "ActionID"      : "hitout4",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "HitAction",
+                                "CompareVal"    : "hitout4"
+                            }
+                        ]
+                    }
                 }
             ],
             "AttackDefs"    : [
@@ -1168,56 +1512,73 @@
             "DefaultAction" : "",
             "Events"        : [
                 {
+                    "TrackName" : "KnockAddDown_R",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 0,
+                    "Duration"    : 360,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "KnockAddDown_R",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "1"
+                    }
                 },
                 {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
                     "TriggerTime" : 349,
-                    "EventType"   : "EET_SetCustomProperty",
+                    "Duration"    : 0,
+                    "EventType"   : "EET_SetCustomPropertyString",
                     "EventData"   : {
                         "Property" : "HitAction",
-                        "ValBool"  : false,
-                        "ValInt"   : 0,
-                        "ValFloat" : 0.0,
-                        "ValString" : ""
-                    },
-                    "ActorID"     : "1"
+                        "Val"      : ""
+                    }
                 }
             ],
             "Interrupts"    : [
                 {
-                    "InterruptName" : "Todead",
-                    "ActionID"      : "dead",
-                    "Enabled"       : true,
-                    "InterruptTime" : 0,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "2",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckDead"
-                        }
-                    ]
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohitup",
-                    "ActionID"      : "hitup",
-                    "Enabled"       : true,
-                    "InterruptTime" : 354,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "1",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckOnGround",
-                            "OnGround"      : true
-                        }
-                    ]
+                    "TrackName" : "Tohitup",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 354,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohitup",
+                        "ActionID"      : "hitup",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckOnGround",
+                                "OnGround"      : true
+                            }
+                        ]
+                    }
                 }
             ],
             "AttackDefs"    : [
@@ -1239,120 +1600,172 @@
             "DefaultAction" : "",
             "Events"        : [
                 {
+                    "TrackName" : "GetUp_R",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
                     "TriggerTime" : 0,
+                    "Duration"    : 733,
                     "EventType"   : "EET_PlayAnim",
                     "EventData"   : {
                         "AnimName" : "GetUp_R",
                         "AnimType" : "EAT_Force",
                         "TriggerName" : "",
                         "TriggerValue" : ""
-                    },
-                    "ActorID"     : "1"
+                    }
                 }
             ],
             "Interrupts"    : [
                 {
-                    "InterruptName" : "Todead",
-                    "ActionID"      : "dead",
-                    "Enabled"       : true,
-                    "InterruptTime" : 730,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "1",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckDead"
-                        }
-                    ]
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 730,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit1",
-                    "ActionID"      : "hit1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 730,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "2",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "hit1"
-                        }
-                    ]
+                    "TrackName" : "Tohit1",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 730,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit1",
+                        "ActionID"      : "hit1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "hit1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohit2",
-                    "ActionID"      : "hit2",
-                    "Enabled"       : true,
-                    "InterruptTime" : 730,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "3",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "hit2"
-                        }
-                    ]
+                    "TrackName" : "Tohit2",
+                    "TrackIndex" : 2,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 730,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohit2",
+                        "ActionID"      : "hit2",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "hit2"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Tohitout1",
-                    "ActionID"      : "hitout1",
-                    "Enabled"       : true,
-                    "InterruptTime" : 730,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "4",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "hitout1"
-                        }
-                    ]
+                    "TrackName" : "Tohitout1",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 730,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Tohitout1",
+                        "ActionID"      : "hitout1",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "hitout1"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toatk",
-                    "ActionID"      : "atk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 730,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "5",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "atk"
-                        }
-                    ]
+                    "TrackName" : "Toatk",
+                    "TrackIndex" : 4,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 730,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "atk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Towalk",
-                    "ActionID"      : "walk",
-                    "Enabled"       : true,
-                    "InterruptTime" : 730,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "6",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "walk"
-                        }
-                    ]
+                    "TrackName" : "Towalk",
+                    "TrackIndex" : 5,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 730,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Towalk",
+                        "ActionID"      : "walk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "walk"
+                            }
+                        ]
+                    }
                 },
                 {
-                    "InterruptName" : "Toidle",
-                    "ActionID"      : "idle",
-                    "Enabled"       : true,
-                    "InterruptTime" : 730,
-                    "CheckAllCondition" : true,
-                    "ActorID"           : "7",
-                    "Conditions"        : [
-                        {
-                            "InterruptType" : "EIT_CheckCustomPropertyString",
-                            "Property"      : "AI",
-                            "CompareVal"    : "idle"
-                        }
-                    ]
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 6,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 730,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "idle"
+                            }
+                        ]
+                    }
                 }
             ],
             "AttackDefs"    : [

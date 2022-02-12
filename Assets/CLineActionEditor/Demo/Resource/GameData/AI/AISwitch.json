@@ -2,33 +2,15 @@
 {
     "Property" : [
         {
-            "ID" : "AI_idle",
-            "Name" : "AI_idle",
+            "ID" : "AI_dead",
+            "Name" : "AI_dead",
             "Description" : "",
-            "Order"       : 1000,
+            "Order"       : 1,
             "ActionID"    : "",
             "RandomWeight" : 50,
             "Conditions"   : [
                 {
-                    "ConditionType" : "EAT_CheckAITargetIsNull"
-                }
-            ]
-        },
-        {
-            "ID" : "AI_walk",
-            "Name" : "AI_walk",
-            "Description" : "",
-            "Order"       : 800,
-            "ActionID"    : "",
-            "RandomWeight" : 50,
-            "Conditions"   : [
-                {
-                    "ConditionType" : "EAT_CheckAITargetNotNull"
-                },
-                {
-                    "ConditionType" : "EAT_CheckAIDistCustomProperty",
-                    "Property"      : "AttackDist",
-                    "CompareType"   : "ECT_Greater"
+                    "ConditionType" : "EAT_CheckAIDead"
                 }
             ]
         },
@@ -48,15 +30,51 @@
             ]
         },
         {
-            "ID" : "AI_dead",
-            "Name" : "AI_dead",
+            "ID" : "AI_walk",
+            "Name" : "AI_walk",
             "Description" : "",
-            "Order"       : 1,
+            "Order"       : 800,
             "ActionID"    : "",
             "RandomWeight" : 50,
             "Conditions"   : [
                 {
-                    "ConditionType" : "EAT_CheckAIDead"
+                    "ConditionType" : "EAT_CheckAITargetNotNull"
+                },
+                {
+                    "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                    "Property"      : "AttackDist",
+                    "CompareType"   : "ECT_Greater"
+                },
+                {
+                    "ConditionType" : "EAT_CheckAIChase"
+                }
+            ]
+        },
+        {
+            "ID" : "AI_patrol",
+            "Name" : "AI_patrol",
+            "Description" : "",
+            "Order"       : 950,
+            "ActionID"    : "",
+            "RandomWeight" : 0,
+            "Conditions"   : [
+                {
+                    "ConditionType" : "EAT_CheckAIPatrol",
+                    "Range"         : 5.0,
+                    "Random"        : 30
+                }
+            ]
+        },
+        {
+            "ID" : "AI_idle",
+            "Name" : "AI_idle",
+            "Description" : "",
+            "Order"       : 1000,
+            "ActionID"    : "",
+            "RandomWeight" : 50,
+            "Conditions"   : [
+                {
+                    "ConditionType" : "EAT_CheckAITargetIsNull"
                 }
             ]
         }

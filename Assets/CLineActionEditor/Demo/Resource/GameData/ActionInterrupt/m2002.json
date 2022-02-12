@@ -5,9 +5,8 @@
             "InterruptName" : "Toidle",
             "ActionID"      : "idle",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -20,9 +19,8 @@
             "InterruptName" : "Towalk",
             "ActionID"      : "walk",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -35,9 +33,8 @@
             "InterruptName" : "Toatk",
             "ActionID"      : "atk",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -50,9 +47,8 @@
             "InterruptName" : "Tohit1",
             "ActionID"      : "hit1",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -65,9 +61,8 @@
             "InterruptName" : "Tohit2",
             "ActionID"      : "hit2",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -80,9 +75,8 @@
             "InterruptName" : "Todead",
             "ActionID"      : "dead",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckDead"
@@ -93,9 +87,8 @@
             "InterruptName" : "Tohitout1",
             "ActionID"      : "hitout1",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -108,9 +101,8 @@
             "InterruptName" : "Tohitout2",
             "ActionID"      : "hitout2",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -123,9 +115,8 @@
             "InterruptName" : "Tohitout3",
             "ActionID"      : "hitout3",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckOnGround",
@@ -137,9 +128,8 @@
             "InterruptName" : "Tohitout4",
             "ActionID"      : "hitout4",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -152,9 +142,8 @@
             "InterruptName" : "Tohitup",
             "ActionID"      : "hitup",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckOnGround",

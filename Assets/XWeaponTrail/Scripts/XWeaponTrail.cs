@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Xft {
+namespace XftWeapon {
     public class XWeaponTrail : MonoBehaviour {
         public class Element {
             public Vector3 PointStart;
@@ -63,7 +63,7 @@ namespace Xft {
 
         #region public members
 
-        public static string Version = "1.1.1";
+        public static string Version = "1.3.1";
 
 
         public bool UseWith2D = false;
@@ -75,7 +75,6 @@ namespace Xft {
         public int MaxFrame = 14;
         public int Granularity = 60;
         public float Fps = 60f;
-
         public Color MyColor = Color.white;
         public Material MyMaterial;
         #endregion
@@ -97,12 +96,15 @@ namespace Xft {
         protected VertexPool mVertexPool;
         protected VertexPool.VertexSegment mVertexSegment;
         protected bool mInited = false;
+        protected bool mActivated = false;
 
         #endregion
 
         #region property
-        public float UpdateInterval {
-            get {
+        public float UpdateInterval
+        {
+            get
+            {
                 return 1f / Fps;
             }
         }
@@ -137,9 +139,14 @@ namespace Xft {
 
         public void Activate() {
 
-            Init();
+            if (mActivated) {
+                return;
+            }
 
+            Init();
+            mActivated = true;
             gameObject.SetActive(true);
+            mVertexPool.SetMeshObjectActive(true);
 
             mFadeT = 1f;
             mIsFading = false;
@@ -162,7 +169,9 @@ namespace Xft {
         }
 
         public void Deactivate() {
+            mActivated = false;
             gameObject.SetActive(false);
+            mVertexPool.SetMeshObjectActive(false);
         }
 
         public void StopSmoothly(float fadeTime) {
@@ -173,24 +182,29 @@ namespace Xft {
         #endregion
 
         #region unity methods
+
+        void OnEnable() {
+            Activate();
+        }
+
+        void OnDisable() {
+            Deactivate();
+        }
+
         void Update() {
 
             if (!mInited)
                 return;
 
-
             UpdateHeadElem();
 
 
             mElapsedTime += Time.deltaTime;
-            if (mElapsedTime < UpdateInterval) {
-                return;
+            if (mElapsedTime > UpdateInterval) {
+                mElapsedTime = 0f;
+                RecordCurElem();
             }
-            mElapsedTime -= UpdateInterval;
-
-
-
-            RecordCurElem();
+            
 
             RefreshSpline();
 
@@ -207,10 +221,6 @@ namespace Xft {
 
 
             mVertexPool.LateUpdate();
-        }
-
-        void OnLevelWasLoaded(int level) {
-            mInited = false;
         }
 
         void OnDestroy() {

@@ -1,5 +1,7 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Xffect/displacement/screen" {
 Properties {
 	_DispMap ("Displacement Map (RG)", 2D) = "white" {}

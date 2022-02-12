@@ -6,10 +6,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Xft;
 
-namespace Xft
-{
+namespace XftWeapon {
 
     public class VertexPool
     {
@@ -100,6 +98,14 @@ namespace Xft
         }
 
 
+        public void SetMeshObjectActive(bool flag) {
+            if (_meshFilter == null) {
+                return;
+            }
+
+            _meshFilter.gameObject.SetActive(flag);
+        }
+
         void CreateMeshObj(XWeaponTrail owner, Material material) {
             GameObject obj = new GameObject("_XWeaponTrailMesh:" + "|material:" + material.name);
             obj.layer = owner.gameObject.layer;
@@ -131,7 +137,9 @@ namespace Xft
                 Mesh.DestroyImmediate(_mesh2d);
             }
             else {
-                GameObject.Destroy(_meshFilter.gameObject);
+                if (_meshFilter != null) {
+                    GameObject.Destroy(_meshFilter.gameObject);
+                }
             }
         }
 

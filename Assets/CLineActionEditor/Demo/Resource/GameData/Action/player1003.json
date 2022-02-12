@@ -1,0 +1,68 @@
+
+{
+    "Property" : [
+        {
+            "ID" : "idle",
+            "Name" : "idle",
+            "CanMove" : false,
+            "CanRotate" : false,
+            "CanHurt"   : false,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Idle",
+            "TotalTime"     : 3283,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
+                    "TriggerTime" : 0,
+                    "Duration"    : 1667,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "idle",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    }
+                },
+                {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
+                    "TriggerTime" : 1633,
+                    "Duration"    : 800,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "run",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    }
+                },
+                {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
+                    "TriggerTime" : 2417,
+                    "Duration"    : 633,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "shoot",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    }
+                }
+            ],
+            "Interrupts"    : [
+            ],
+            "AttackDefs"    : [
+            ]
+        }
+    ]
+}

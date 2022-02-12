@@ -1,0 +1,14 @@
+
+{
+    "ActionInterrupts" : [
+        {
+            "InterruptName" : "Toidle",
+            "ActionID"      : "idle",
+            "Enabled"       : false,
+            "CheckAllCondition" : false,
+            "CrossFadeDuration" : 0.0,
+            "Conditions"        : [
+            ]
+        }
+    ]
+}

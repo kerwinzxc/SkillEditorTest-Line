@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Xft;
+using XftWeapon;
 
 public class XWeaponTrailDemo : MonoBehaviour 
 {

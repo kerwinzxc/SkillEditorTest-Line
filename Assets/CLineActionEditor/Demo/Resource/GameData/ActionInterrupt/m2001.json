@@ -5,9 +5,8 @@
             "InterruptName" : "Toidle",
             "ActionID"      : "idle",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -20,9 +19,8 @@
             "InterruptName" : "Toidle2",
             "ActionID"      : "idle2",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -35,9 +33,8 @@
             "InterruptName" : "Towalk",
             "ActionID"      : "walk",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -50,9 +47,8 @@
             "InterruptName" : "Todie",
             "ActionID"      : "die",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -65,9 +61,8 @@
             "InterruptName" : "Todie1",
             "ActionID"      : "die1",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -80,9 +75,8 @@
             "InterruptName" : "Toatk_a",
             "ActionID"      : "atk_a",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -95,9 +89,8 @@
             "InterruptName" : "Toatk_b",
             "ActionID"      : "atk_b",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -110,9 +103,8 @@
             "InterruptName" : "Toatk_c",
             "ActionID"      : "atk_c",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -125,9 +117,8 @@
             "InterruptName" : "ToHitNormal1",
             "ActionID"      : "HitNormal1",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -140,9 +131,8 @@
             "InterruptName" : "ToHitNormal2",
             "ActionID"      : "HitNormal2",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -155,9 +145,8 @@
             "InterruptName" : "ToHitNormal3",
             "ActionID"      : "HitNormal3",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -170,9 +159,8 @@
             "InterruptName" : "ToHitKnockDown1",
             "ActionID"      : "HitKnockDown1",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -185,9 +173,8 @@
             "InterruptName" : "ToHitKnockOut_k1",
             "ActionID"      : "HitKnockOut_k1",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -200,9 +187,8 @@
             "InterruptName" : "ToHitKnockOut_k2",
             "ActionID"      : "HitKnockOut_k2",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -215,9 +201,8 @@
             "InterruptName" : "ToHitKnockOut_k3",
             "ActionID"      : "HitKnockOut_k3",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -230,9 +215,8 @@
             "InterruptName" : "ToHitKnockOut_k4",
             "ActionID"      : "HitKnockOut_k4",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -245,9 +229,8 @@
             "InterruptName" : "ToHitKnockOut_k5",
             "ActionID"      : "HitKnockOut_k5",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -260,9 +243,8 @@
             "InterruptName" : "ToHitKnockOut_a",
             "ActionID"      : "HitKnockOut_a",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -275,9 +257,8 @@
             "InterruptName" : "ToHitKnockOut_b",
             "ActionID"      : "HitKnockOut_b",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -290,9 +271,8 @@
             "InterruptName" : "ToHitKnockBack1",
             "ActionID"      : "HitKnockBack1",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -305,9 +285,8 @@
             "InterruptName" : "ToHitKnockBack2",
             "ActionID"      : "HitKnockBack2",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -320,9 +299,8 @@
             "InterruptName" : "ToHitKnockBack3",
             "ActionID"      : "HitKnockBack3",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -335,9 +313,8 @@
             "InterruptName" : "Tohit_downing",
             "ActionID"      : "hit_downing",
             "Enabled"       : false,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
             ]
         },
@@ -345,9 +322,8 @@
             "InterruptName" : "Tohit_down",
             "ActionID"      : "hit_down",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckOnGround",

@@ -5,9 +5,8 @@
             "InterruptName" : "Toidle",
             "ActionID"      : "idle",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyBool",
@@ -40,9 +39,8 @@
             "InterruptName" : "Torun",
             "ActionID"      : "run",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyBool",
@@ -55,9 +53,8 @@
             "InterruptName" : "Toatk1",
             "ActionID"      : "atk1",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : false,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyBool",
@@ -70,15 +67,18 @@
             "InterruptName" : "Toatk2",
             "ActionID"      : "atk2",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
-                    "InterruptType" : "EIT_CheckCustomPropertyCount",
-                    "Property"      : "AttackCount",
-                    "Count"         : 2,
-                    "CompareType"   : "ECT_Equal"
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "VarStringTag",
+                    "CompareVal"    : "atk1"
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputAttack",
+                    "CompareVal"    : true
                 }
             ]
         },
@@ -86,15 +86,18 @@
             "InterruptName" : "Toatk3",
             "ActionID"      : "atk3",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
-                    "InterruptType" : "EIT_CheckCustomPropertyCount",
-                    "Property"      : "AttackCount",
-                    "Count"         : 3,
-                    "CompareType"   : "ECT_Equal"
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "VarStringTag",
+                    "CompareVal"    : "atk2"
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputAttack",
+                    "CompareVal"    : true
                 }
             ]
         },
@@ -102,15 +105,18 @@
             "InterruptName" : "Toatk4",
             "ActionID"      : "atk4",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
-                    "InterruptType" : "EIT_CheckCustomPropertyCount",
-                    "Property"      : "AttackCount",
-                    "Count"         : 4,
-                    "CompareType"   : "ECT_Equal"
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "VarStringTag",
+                    "CompareVal"    : "atk3"
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputAttack",
+                    "CompareVal"    : true
                 }
             ]
         },
@@ -118,15 +124,18 @@
             "InterruptName" : "Toatk5",
             "ActionID"      : "atk5",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
-                    "InterruptType" : "EIT_CheckCustomPropertyCount",
-                    "Property"      : "AttackCount",
-                    "Count"         : 5,
-                    "CompareType"   : "ECT_Equal"
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "VarStringTag",
+                    "CompareVal"    : "atk4"
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputAttack",
+                    "CompareVal"    : true
                 }
             ]
         },
@@ -134,15 +143,18 @@
             "InterruptName" : "Toatk6",
             "ActionID"      : "atk6",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
-                    "InterruptType" : "EIT_CheckCustomPropertyCount",
-                    "Property"      : "AttackCount",
-                    "Count"         : 6,
-                    "CompareType"   : "ECT_Equal"
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "VarStringTag",
+                    "CompareVal"    : "atk5"
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputAttack",
+                    "CompareVal"    : true
                 }
             ]
         },
@@ -150,9 +162,8 @@
             "InterruptName" : "Toskill1",
             "ActionID"      : "skill1",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -165,9 +176,8 @@
             "InterruptName" : "Toskill2",
             "ActionID"      : "skill2",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",
@@ -180,9 +190,8 @@
             "InterruptName" : "Toskill3",
             "ActionID"      : "skill3",
             "Enabled"       : true,
-            "InterruptTime" : 0,
             "CheckAllCondition" : true,
-            "ActorID"           : "",
+            "CrossFadeDuration" : 0.0,
             "Conditions"        : [
                 {
                     "InterruptType" : "EIT_CheckCustomPropertyString",

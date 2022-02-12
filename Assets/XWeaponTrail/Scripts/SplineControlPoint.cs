@@ -2,8 +2,7 @@
 using System.Collections;
 
 
-namespace Xft
-{
+namespace XftWeapon {
     public class SplineControlPoint
     {
         public Vector3 Position;

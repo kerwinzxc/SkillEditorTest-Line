@@ -22,6 +22,17 @@
             "VictoryActionList" : [
             ],
             "ActionGroup"       : "player1002"
+        },
+        {
+            "ID" : "",
+            "Name" : "player1003",
+            "Description" : "",
+            "Prefab"      : "/prefabs/player/player1003.prefab",
+            "StartupAction" : "",
+            "PlayerSex"     : "EPS_Man",
+            "VictoryActionList" : [
+            ],
+            "ActionGroup"       : "player1003"
         }
     ]
 }
