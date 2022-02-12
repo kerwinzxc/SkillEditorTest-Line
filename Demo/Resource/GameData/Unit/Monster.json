@@ -1,0 +1,201 @@
+
+{
+    "Property" : [
+        {
+            "ID" : "1",
+            "Name" : "m2001",
+            "Description" : "",
+            "Prefab"      : "/prefabs/monster/m2001.prefab",
+            "StartupAI"   : "AI_idle",
+            "StartupWeapon" : "",
+            "ActionGroup"   : "m2001",
+            "AISwitchs"     : [
+                {
+                    "ID" : "AI_idle",
+                    "Name" : "AI_idle",
+                    "Description" : "",
+                    "Order"       : 1000,
+                    "ActionID"    : "idle",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAITargetIsNull"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_idle2",
+                    "Name" : "AI_idle2",
+                    "Description" : "",
+                    "Order"       : 1000,
+                    "ActionID"    : "idle2",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAITargetIsNull"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_walk",
+                    "Name" : "AI_walk",
+                    "Description" : "",
+                    "Order"       : 800,
+                    "ActionID"    : "walk",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAITargetNotNull"
+                        },
+                        {
+                            "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                            "Property"      : "AttackDist",
+                            "CompareType"   : "ECT_Greater"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_atka",
+                    "Name" : "AI_atka",
+                    "Description" : "",
+                    "Order"       : 500,
+                    "ActionID"    : "atk_a",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                            "Property"      : "AttackDist",
+                            "CompareType"   : "ECT_LessEqual"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_atkb",
+                    "Name" : "AI_atkb",
+                    "Description" : "",
+                    "Order"       : 500,
+                    "ActionID"    : "atk_b",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                            "Property"      : "AttackDist",
+                            "CompareType"   : "ECT_LessEqual"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_atkc",
+                    "Name" : "AI_atkc",
+                    "Description" : "",
+                    "Order"       : 500,
+                    "ActionID"    : "atk_c",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                            "Property"      : "AttackDist",
+                            "CompareType"   : "ECT_LessEqual"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_dead",
+                    "Name" : "AI_dead",
+                    "Description" : "",
+                    "Order"       : 1,
+                    "ActionID"    : "die",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAIDead"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_dead1",
+                    "Name" : "AI_dead1",
+                    "Description" : "",
+                    "Order"       : 1,
+                    "ActionID"    : "die1",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAIDead"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ID" : "2",
+            "Name" : "m2002",
+            "Description" : "",
+            "Prefab"      : "/prefabs/monster/m2002.prefab",
+            "StartupAI"   : "AI_idle",
+            "StartupWeapon" : "",
+            "ActionGroup"   : "m2002",
+            "AISwitchs"     : [
+                {
+                    "ID" : "AI_idle",
+                    "Name" : "AI_idle",
+                    "Description" : "",
+                    "Order"       : 1000,
+                    "ActionID"    : "idle",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAITargetIsNull"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_walk",
+                    "Name" : "AI_walk",
+                    "Description" : "",
+                    "Order"       : 800,
+                    "ActionID"    : "walk",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAITargetNotNull"
+                        },
+                        {
+                            "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                            "Property"      : "AttackDist",
+                            "CompareType"   : "ECT_Greater"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_atk",
+                    "Name" : "AI_atk",
+                    "Description" : "",
+                    "Order"       : 500,
+                    "ActionID"    : "atk",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAIDistCustomProperty",
+                            "Property"      : "AttackDist",
+                            "CompareType"   : "ECT_LessEqual"
+                        }
+                    ]
+                },
+                {
+                    "ID" : "AI_dead",
+                    "Name" : "AI_dead",
+                    "Description" : "",
+                    "Order"       : 1,
+                    "ActionID"    : "dead",
+                    "RandomWeight" : 50,
+                    "Conditions"   : [
+                        {
+                            "ConditionType" : "EAT_CheckAIDead"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

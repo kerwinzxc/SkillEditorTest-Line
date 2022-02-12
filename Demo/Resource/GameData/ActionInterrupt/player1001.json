@@ -1,0 +1,472 @@
+
+{
+    "ActionInterrupts" : [
+        {
+            "InterruptName" : "Toidle",
+            "ActionID"      : "idle",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputRoll",
+                    "CompareVal"    : false
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputMove",
+                    "CompareVal"    : false
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputJump",
+                    "CompareVal"    : false
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputAttack",
+                    "CompareVal"    : false
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputSwitchWeapon",
+                    "CompareVal"    : false
+                },
+                {
+                    "InterruptType" : "EIT_CheckWeaponType",
+                    "WeaponType"    : "EWT_Sword"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Torun",
+            "ActionID"      : "run",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputMove",
+                    "CompareVal"    : true
+                },
+                {
+                    "InterruptType" : "EIT_CheckWeaponType",
+                    "WeaponType"    : "EWT_Sword"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk1",
+            "ActionID"      : "atk1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputAttack",
+                    "CompareVal"    : true
+                },
+                {
+                    "InterruptType" : "EIT_CheckWeaponType",
+                    "WeaponType"    : "EWT_Sword"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk2",
+            "ActionID"      : "atk2",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "AttackCount",
+                    "Count"         : 2,
+                    "CompareType"   : "ECT_Equal"
+                },
+                {
+                    "InterruptType" : "EIT_CheckWeaponType",
+                    "WeaponType"    : "EWT_Sword"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk3",
+            "ActionID"      : "atk3",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "AttackCount",
+                    "Count"         : 3,
+                    "CompareType"   : "ECT_Equal"
+                },
+                {
+                    "InterruptType" : "EIT_CheckWeaponType",
+                    "WeaponType"    : "EWT_Sword"
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyFloat",
+                    "Property"      : "KeepAttakRandom",
+                    "MinVal"        : 0.0,
+                    "MaxVal"        : 0.0
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk3_a",
+            "ActionID"      : "atk3_a",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "AttackCount",
+                    "Count"         : 3,
+                    "CompareType"   : "ECT_Equal"
+                },
+                {
+                    "InterruptType" : "EIT_CheckWeaponType",
+                    "WeaponType"    : "EWT_Sword"
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyFloat",
+                    "Property"      : "KeepAttakRandom",
+                    "MinVal"        : 0.0,
+                    "MaxVal"        : 1.0
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk4",
+            "ActionID"      : "atk4",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "AttackCount",
+                    "Count"         : 4,
+                    "CompareType"   : "ECT_Equal"
+                },
+                {
+                    "InterruptType" : "EIT_CheckWeaponType",
+                    "WeaponType"    : "EWT_Sword"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk4_a",
+            "ActionID"      : "atk4_a",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "AttackCount",
+                    "Count"         : 4,
+                    "CompareType"   : "ECT_Equal"
+                },
+                {
+                    "InterruptType" : "EIT_CheckWeaponType",
+                    "WeaponType"    : "EWT_Sword"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk5",
+            "ActionID"      : "atk5",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "AttackCount",
+                    "Count"         : 5,
+                    "CompareType"   : "ECT_Equal"
+                },
+                {
+                    "InterruptType" : "EIT_CheckWeaponType",
+                    "WeaponType"    : "EWT_Sword"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk5_a",
+            "ActionID"      : "atk5_a",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "AttackCount",
+                    "Count"         : 5,
+                    "CompareType"   : "ECT_Equal"
+                },
+                {
+                    "InterruptType" : "EIT_CheckWeaponType",
+                    "WeaponType"    : "EWT_Sword"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_jump_a",
+            "ActionID"      : "skill_jump_a",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputJump",
+                    "CompareVal"    : true
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_jump_b",
+            "ActionID"      : "skill_jump_b",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_jump_b_1",
+            "ActionID"      : "skill_jump_b_1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputJump",
+                    "CompareVal"    : true
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "JumpCount",
+                    "Count"         : 2,
+                    "CompareType"   : "ECT_Equal"
+                },
+                {
+                    "InterruptType" : "EIT_CheckVelocityY",
+                    "VelocityY"     : 3.93300008773804,
+                    "CompareVelocityY" : "ECT_Less"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_jump_c",
+            "ActionID"      : "skill_jump_c",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : true,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckOnGround",
+                    "OnGround"      : true
+                },
+                {
+                    "InterruptType" : "EIT_CheckActionState",
+                    "ActionState"   : "Jump"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_congci_b",
+            "ActionID"      : "skill_congci_b",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputLongPressed",
+                    "CompareVal"    : true
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_congci_b1",
+            "ActionID"      : "skill_congci_b1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_congci_c1",
+            "ActionID"      : "skill_congci_c1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputLongPressed",
+                    "CompareVal"    : false
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_congci_c1_2",
+            "ActionID"      : "skill_congci_c1_2",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+            ]
+        },
+        {
+            "InterruptName" : "Toair_atk0",
+            "ActionID"      : "air_atk0",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "InputSkill",
+                    "CompareVal"    : "skill_air_atk"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toair_atk1",
+            "ActionID"      : "air_atk1",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "SkillCount",
+                    "Count"         : 2,
+                    "CompareType"   : "ECT_Equal"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toair_atk2",
+            "ActionID"      : "air_atk2",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "SkillCount",
+                    "Count"         : 3,
+                    "CompareType"   : "ECT_Equal"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toair_atk3",
+            "ActionID"      : "air_atk3",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "SkillCount",
+                    "Count"         : 4,
+                    "CompareType"   : "ECT_Equal"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toair_atk4",
+            "ActionID"      : "air_atk4",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyCount",
+                    "Property"      : "SkillCount",
+                    "Count"         : 5,
+                    "CompareType"   : "ECT_Equal"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_hitground",
+            "ActionID"      : "skill_hitground",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "InputSkill",
+                    "CompareVal"    : "skill_hitground"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_xuanfengzhan",
+            "ActionID"      : "skill_xuanfengzhan",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "InputSkill",
+                    "CompareVal"    : "skill_xuanfengzhan"
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toskill_xuanfengzhan_end",
+            "ActionID"      : "skill_xuanfengzhan_end",
+            "Enabled"       : true,
+            "InterruptTime" : 0,
+            "CheckAllCondition" : false,
+            "ActorID"           : "",
+            "Conditions"        : [
+            ]
+        }
+    ]
+}

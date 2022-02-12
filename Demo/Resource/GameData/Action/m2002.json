@@ -1,0 +1,1362 @@
+
+{
+    "Property" : [
+        {
+            "ID" : "idle",
+            "Name" : "idle",
+            "CanMove" : true,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Idle",
+            "TotalTime"     : 1000,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Idle_R",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Todead",
+                    "ActionID"      : "dead",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckDead"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk",
+                    "ActionID"      : "atk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit1",
+                    "ActionID"      : "hit1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hit1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit2",
+                    "ActionID"      : "hit2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hit2"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohitout1",
+                    "ActionID"      : "hitout1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "7",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hitout1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Towalk",
+                    "ActionID"      : "walk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "walk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 994,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "idle"
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "walk",
+            "Name" : "walk",
+            "CanMove" : true,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Move",
+            "TotalTime"     : 800,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Walk_R",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Todead",
+                    "ActionID"      : "dead",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckDead"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk",
+                    "ActionID"      : "atk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit1",
+                    "ActionID"      : "hit1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hit1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit2",
+                    "ActionID"      : "hit2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hit2"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohitout1",
+                    "ActionID"      : "hitout1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "7",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hitout1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Towalk",
+                    "ActionID"      : "walk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 794,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "walk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "idle"
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "atk",
+            "Name" : "atk",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Attack",
+            "TotalTime"     : 1766,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Attack_R",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 768,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Idle_R",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "2"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Todead",
+                    "ActionID"      : "dead",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckDead"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk",
+                    "ActionID"      : "atk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1710,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit1",
+                    "ActionID"      : "hit1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hit1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit2",
+                    "ActionID"      : "hit2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hit2"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohitout1",
+                    "ActionID"      : "hitout1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "7",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hitout1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Towalk",
+                    "ActionID"      : "walk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 751,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "walk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 754,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "idle"
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "hit1",
+            "Name" : "hit1",
+            "CanMove" : false,
+            "CanRotate" : false,
+            "CanHurt"   : true,
+            "CanHit"    : false,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "BeHit",
+            "TotalTime"     : 366,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "NormalHit02_R",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 354,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "HitAction",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Todead",
+                    "ActionID"      : "dead",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckDead"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohitout1",
+                    "ActionID"      : "hitout1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "7",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hitout1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk",
+                    "ActionID"      : "atk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 360,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit1",
+                    "ActionID"      : "hit1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 360,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hit1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit2",
+                    "ActionID"      : "hit2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 360,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hit2"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Towalk",
+                    "ActionID"      : "walk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 360,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "walk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 360,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "idle"
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "hit2",
+            "Name" : "hit2",
+            "CanMove" : false,
+            "CanRotate" : false,
+            "CanHurt"   : true,
+            "CanHit"    : false,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "BeHit",
+            "TotalTime"     : 666,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "BackHit_R",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 656,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "HitAction",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Todead",
+                    "ActionID"      : "dead",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckDead"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohitout1",
+                    "ActionID"      : "hitout1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "7",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hitout1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk",
+                    "ActionID"      : "atk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 660,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit1",
+                    "ActionID"      : "hit1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 660,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hit1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit2",
+                    "ActionID"      : "hit2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 660,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hit2"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Towalk",
+                    "ActionID"      : "walk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 660,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "walk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 660,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "idle"
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "dead",
+            "Name" : "dead",
+            "CanMove" : false,
+            "CanRotate" : false,
+            "CanHurt"   : false,
+            "CanHit"    : false,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Dead",
+            "TotalTime"     : 10000,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/misc/fx_dead.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyPosition",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_behurt",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlaySound",
+                    "EventData"   : {
+                        "SoundName" : "/prefabs/audio/m2002/hit.prefab",
+                        "InstanceCount" : 3,
+                        "DelayTime"     : 0.0,
+                        "UseRandom"     : false,
+                        "RandomSoundList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_DelUnit",
+                    "EventData"   : {
+                        "Delete" : false
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 9998,
+                    "EventType"   : "EET_DelUnit",
+                    "EventData"   : {
+                        "Delete" : true
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "hitout1",
+            "Name" : "hitout1",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : true,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "BeHit",
+            "TotalTime"     : 500,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "KnockInAir_R_LV1",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_Move",
+                    "EventData"   : {
+                        "IgnorMove" : false,
+                        "ResetVelocity" : true,
+                        "MoveDirType"   : "EMDT_Custom",
+                        "CustomDirection" : {
+                            "x" : 0.0,
+                            "y" : 1.0,
+                            "z" : 0.0
+                        },
+                        "MoveSpeedType"   : "EMST_Custom",
+                        "CustomSpeed"     : 11.5,
+                        "AnimDist"        : 0.0,
+                        "AnimTime"        : 0.0,
+                        "ResetAcc"        : true,
+                        "Acc"             : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "ActorID"     : "2"
+                },
+                {
+                    "TriggerTime" : 130,
+                    "EventType"   : "EET_Move",
+                    "EventData"   : {
+                        "IgnorMove" : true,
+                        "ResetVelocity" : true,
+                        "MoveDirType"   : "EMDT_Custom",
+                        "CustomDirection" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "MoveSpeedType"   : "EMST_Custom",
+                        "CustomSpeed"     : 0.0,
+                        "AnimDist"        : 0.0,
+                        "AnimTime"        : 0.0,
+                        "ResetAcc"        : true,
+                        "Acc"             : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "ActorID"     : "2"
+                },
+                {
+                    "TriggerTime" : 465,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "HitAction",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Todead",
+                    "ActionID"      : "dead",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckDead"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohitout2",
+                    "ActionID"      : "hitout2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hitout2"
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "hitout2",
+            "Name" : "hitout2",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : true,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "BeHit",
+            "TotalTime"     : 600,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "KnockInAir_R_LV2",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_Move",
+                    "EventData"   : {
+                        "IgnorMove" : false,
+                        "ResetVelocity" : true,
+                        "MoveDirType"   : "EMDT_Custom",
+                        "CustomDirection" : {
+                            "x" : 0.0,
+                            "y" : 1.0,
+                            "z" : 0.0
+                        },
+                        "MoveSpeedType"   : "EMST_Custom",
+                        "CustomSpeed"     : 6.875,
+                        "AnimDist"        : 0.0,
+                        "AnimTime"        : 0.0,
+                        "ResetAcc"        : true,
+                        "Acc"             : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "ActorID"     : "2"
+                },
+                {
+                    "TriggerTime" : 160,
+                    "EventType"   : "EET_Move",
+                    "EventData"   : {
+                        "IgnorMove" : false,
+                        "ResetVelocity" : true,
+                        "MoveDirType"   : "EMDT_Custom",
+                        "CustomDirection" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "MoveSpeedType"   : "EMST_Custom",
+                        "CustomSpeed"     : 0.0,
+                        "AnimDist"        : 0.0,
+                        "AnimTime"        : 0.0,
+                        "ResetAcc"        : true,
+                        "Acc"             : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "ActorID"     : "2"
+                },
+                {
+                    "TriggerTime" : 451,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "HitAction",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Todead",
+                    "ActionID"      : "dead",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckDead"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohitout3",
+                    "ActionID"      : "hitout3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 167,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckOnGround",
+                            "OnGround"      : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "hitout3",
+            "Name" : "hitout3",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : true,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "BeHit",
+            "TotalTime"     : 700,
+            "DefaultAction" : "hitup",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "KnockInAir_R_LV3",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_Move",
+                    "EventData"   : {
+                        "IgnorMove" : false,
+                        "ResetVelocity" : true,
+                        "MoveDirType"   : "EMDT_Custom",
+                        "CustomDirection" : {
+                            "x" : 0.0,
+                            "y" : -1.0,
+                            "z" : 0.0
+                        },
+                        "MoveSpeedType"   : "EMST_UseAnim",
+                        "CustomSpeed"     : 0.0,
+                        "AnimDist"        : 2.59999990463257,
+                        "AnimTime"        : 0.34799998998642,
+                        "ResetAcc"        : true,
+                        "Acc"             : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "ActorID"     : "2"
+                },
+                {
+                    "TriggerTime" : 349,
+                    "EventType"   : "EET_Move",
+                    "EventData"   : {
+                        "IgnorMove" : false,
+                        "ResetVelocity" : true,
+                        "MoveDirType"   : "EMDT_Custom",
+                        "CustomDirection" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "MoveSpeedType"   : "EMST_Custom",
+                        "CustomSpeed"     : 0.0,
+                        "AnimDist"        : 0.0,
+                        "AnimTime"        : 0.0,
+                        "ResetAcc"        : true,
+                        "Acc"             : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "ActorID"     : "2"
+                },
+                {
+                    "TriggerTime" : 691,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "HitAction",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Todead",
+                    "ActionID"      : "dead",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckDead"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohitout4",
+                    "ActionID"      : "hitout4",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "HitAction",
+                            "CompareVal"    : "hitout4"
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "hitout4",
+            "Name" : "hitout4",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "BeHit",
+            "TotalTime"     : 360,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "KnockAddDown_R",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 349,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "HitAction",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Todead",
+                    "ActionID"      : "dead",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckDead"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohitup",
+                    "ActionID"      : "hitup",
+                    "Enabled"       : true,
+                    "InterruptTime" : 354,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckOnGround",
+                            "OnGround"      : true
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "hitup",
+            "Name" : "hitup",
+            "CanMove" : false,
+            "CanRotate" : false,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "BeHit",
+            "TotalTime"     : 733,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "GetUp_R",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Todead",
+                    "ActionID"      : "dead",
+                    "Enabled"       : true,
+                    "InterruptTime" : 730,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckDead"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit1",
+                    "ActionID"      : "hit1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 730,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "hit1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohit2",
+                    "ActionID"      : "hit2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 730,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "hit2"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Tohitout1",
+                    "ActionID"      : "hitout1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 730,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "hitout1"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk",
+                    "ActionID"      : "atk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 730,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Towalk",
+                    "ActionID"      : "walk",
+                    "Enabled"       : true,
+                    "InterruptTime" : 730,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "walk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 730,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "7",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "AI",
+                            "CompareVal"    : "idle"
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        }
+    ]
+}

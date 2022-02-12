@@ -1,0 +1,2572 @@
+
+{
+    "Property" : [
+        {
+            "ID" : "idle",
+            "Name" : "idle",
+            "CanMove" : true,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Idle",
+            "TotalTime"     : 800,
+            "DefaultAction" : "idle",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Idle_R",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill1",
+                    "ActionID"      : "skill1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_air_atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill2",
+                    "ActionID"      : "skill2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_hitground"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill3",
+                    "ActionID"      : "skill3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_xuanfengzhan"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk1",
+                    "ActionID"      : "atk1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : false,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Torun",
+                    "ActionID"      : "run",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : true
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "run",
+            "Name" : "run",
+            "CanMove" : true,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Move",
+            "TotalTime"     : 466,
+            "DefaultAction" : "run",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Run_R",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill1",
+                    "ActionID"      : "skill1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_air_atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill2",
+                    "ActionID"      : "skill2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_hitground"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill3",
+                    "ActionID"      : "skill3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_xuanfengzhan"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk1",
+                    "ActionID"      : "atk1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : false,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 0,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputRoll",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputJump",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputSwitchWeapon",
+                            "CompareVal"    : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "atk1",
+            "Name" : "atk1",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Attack",
+            "TotalTime"     : 366,
+            "DefaultAction" : "atk1",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Attack_R_LV1",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlaySound",
+                    "EventData"   : {
+                        "SoundName" : "/prefabs/audio/player1002/atk1.prefab",
+                        "InstanceCount" : 3,
+                        "DelayTime"     : 0.0,
+                        "UseRandom"     : false,
+                        "RandomSoundList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 104,
+                    "EventType"   : "EET_ActionBreak",
+                    "EventData"   : {
+                        "EnableBreak" : true
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 321,
+                    "EventType"   : "EET_ActionBreak",
+                    "EventData"   : {
+                        "EnableBreak" : false
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 330,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "AttackCount",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "2"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill1",
+                    "ActionID"      : "skill1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 181,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_air_atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill2",
+                    "ActionID"      : "skill2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 181,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_hitground"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill3",
+                    "ActionID"      : "skill3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 181,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_xuanfengzhan"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk2",
+                    "ActionID"      : "atk2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 181,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyCount",
+                            "Property"      : "AttackCount",
+                            "Count"         : 2,
+                            "CompareType"   : "ECT_Equal"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Torun",
+                    "ActionID"      : "run",
+                    "Enabled"       : true,
+                    "InterruptTime" : 359,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 359,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputRoll",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputJump",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputSwitchWeapon",
+                            "CompareVal"    : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+                {
+                    "ID" : "at1",
+                    "ActorID" : "1",
+                    "Name"    : "at1",
+                    "Description" : "",
+                    "TriggerTime" : 143,
+                    "Delay"       : 0.0,
+                    "DeadActionChanged" : false,
+                    "AttackHitType"     : "EAHT_Normal",
+                    "EmitType"          : "EET_Normal",
+                    "EmitProperty"      : {
+                        "Num" : 1,
+                        "Interval" : 0.0,
+                        "Type"     : "EET_Interval",
+                        "PosType"  : "EEPT_AttackerCurrentPosAndTargetDir",
+                        "Dummy"    : "",
+                        "EmitOffset" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "EmitRotation" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "EntityType"        : "EET_FrameFan",
+                    "EntityProperty"    : {
+                        "Effect" : "",
+                        "Sound"  : "",
+                        "SoundCount" : 1,
+                        "Delay"      : 0.0,
+                        "Radius"     : 4.0,
+                        "Height"     : 4.0,
+                        "Degree"     : 180.0
+                    },
+                    "MotionAnimatorType" : "EMAT_None",
+                    "MotionAnimatorProperty" : {
+                    },
+                    "FeedbackList"           : [
+                        {
+                            "FeedbackType" : "EHT_HitDamage",
+                            "DamageType"   : "EDT_Normal"
+                        },
+                        {
+                            "FeedbackType" : "EHT_HitAction",
+                            "HitList"      : [
+                                {
+                                    "ActionID" : "hit1",
+                                    "Weight"   : 50
+                                },
+                                {
+                                    "ActionID" : "hit2",
+                                    "Weight"   : 50
+                                }
+                            ]
+                        },
+                        {
+                            "FeedbackType" : "EHT_HitModifyMaterial"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ID" : "atk2",
+            "Name" : "atk2",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Attack",
+            "TotalTime"     : 500,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Attack_R_LV2",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlaySound",
+                    "EventData"   : {
+                        "SoundName" : "/prefabs/audio/player1002/atk2.prefab",
+                        "InstanceCount" : 3,
+                        "DelayTime"     : 0.0,
+                        "UseRandom"     : false,
+                        "RandomSoundList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 129,
+                    "EventType"   : "EET_ActionBreak",
+                    "EventData"   : {
+                        "EnableBreak" : true
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 421,
+                    "EventType"   : "EET_ActionBreak",
+                    "EventData"   : {
+                        "EnableBreak" : false
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 425,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "AttackCount",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "2"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill1",
+                    "ActionID"      : "skill1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 286,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_air_atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill2",
+                    "ActionID"      : "skill2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 285,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_hitground"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill3",
+                    "ActionID"      : "skill3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 285,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_xuanfengzhan"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk3",
+                    "ActionID"      : "atk3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 285,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyCount",
+                            "Property"      : "AttackCount",
+                            "Count"         : 3,
+                            "CompareType"   : "ECT_Equal"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk1",
+                    "ActionID"      : "atk1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 493,
+                    "CheckAllCondition" : false,
+                    "ActorID"           : "7",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Torun",
+                    "ActionID"      : "run",
+                    "Enabled"       : true,
+                    "InterruptTime" : 494,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 494,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputRoll",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputJump",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputSwitchWeapon",
+                            "CompareVal"    : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+                {
+                    "ID" : "atk2",
+                    "ActorID" : "1",
+                    "Name"    : "atk2",
+                    "Description" : "",
+                    "TriggerTime" : 202,
+                    "Delay"       : 0.0,
+                    "DeadActionChanged" : false,
+                    "AttackHitType"     : "EAHT_Normal",
+                    "EmitType"          : "EET_Normal",
+                    "EmitProperty"      : {
+                        "Num" : 1,
+                        "Interval" : 0.0,
+                        "Type"     : "EET_Interval",
+                        "PosType"  : "EEPT_AttackerCurrentPosAndTargetDir",
+                        "Dummy"    : "",
+                        "EmitOffset" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "EmitRotation" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "EntityType"        : "EET_FrameFan",
+                    "EntityProperty"    : {
+                        "Effect" : "",
+                        "Sound"  : "",
+                        "SoundCount" : 1,
+                        "Delay"      : 0.0,
+                        "Radius"     : 4.0,
+                        "Height"     : 4.0,
+                        "Degree"     : 180.0
+                    },
+                    "MotionAnimatorType" : "EMAT_None",
+                    "MotionAnimatorProperty" : {
+                    },
+                    "FeedbackList"           : [
+                        {
+                            "FeedbackType" : "EHT_HitDamage",
+                            "DamageType"   : "EDT_Normal"
+                        },
+                        {
+                            "FeedbackType" : "EHT_HitAction",
+                            "HitList"      : [
+                                {
+                                    "ActionID" : "hit1",
+                                    "Weight"   : 50
+                                },
+                                {
+                                    "ActionID" : "hit2",
+                                    "Weight"   : 50
+                                }
+                            ]
+                        },
+                        {
+                            "FeedbackType" : "EHT_HitModifyMaterial"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ID" : "atk3",
+            "Name" : "atk3",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Attack",
+            "TotalTime"     : 500,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Attack_R_LV3",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlaySound",
+                    "EventData"   : {
+                        "SoundName" : "/prefabs/audio/player1002/atk3.prefab",
+                        "InstanceCount" : 3,
+                        "DelayTime"     : 0.0,
+                        "UseRandom"     : false,
+                        "RandomSoundList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 136,
+                    "EventType"   : "EET_ActionBreak",
+                    "EventData"   : {
+                        "EnableBreak" : true
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 423,
+                    "EventType"   : "EET_ActionBreak",
+                    "EventData"   : {
+                        "EnableBreak" : false
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 425,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "AttackCount",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "2"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill1",
+                    "ActionID"      : "skill1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 286,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_air_atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill2",
+                    "ActionID"      : "skill2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 285,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_hitground"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill3",
+                    "ActionID"      : "skill3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 285,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_xuanfengzhan"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk4",
+                    "ActionID"      : "atk4",
+                    "Enabled"       : true,
+                    "InterruptTime" : 285,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyCount",
+                            "Property"      : "AttackCount",
+                            "Count"         : 4,
+                            "CompareType"   : "ECT_Equal"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk1",
+                    "ActionID"      : "atk1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 493,
+                    "CheckAllCondition" : false,
+                    "ActorID"           : "7",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Torun",
+                    "ActionID"      : "run",
+                    "Enabled"       : true,
+                    "InterruptTime" : 494,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 494,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputRoll",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputJump",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputSwitchWeapon",
+                            "CompareVal"    : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "atk4",
+            "Name" : "atk4",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Attack",
+            "TotalTime"     : 566,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Attack_R_LV4",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlaySound",
+                    "EventData"   : {
+                        "SoundName" : "/prefabs/audio/player1002/atk4.prefab",
+                        "InstanceCount" : 3,
+                        "DelayTime"     : 0.0,
+                        "UseRandom"     : false,
+                        "RandomSoundList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 128,
+                    "EventType"   : "EET_ActionBreak",
+                    "EventData"   : {
+                        "EnableBreak" : true
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 449,
+                    "EventType"   : "EET_ActionBreak",
+                    "EventData"   : {
+                        "EnableBreak" : false
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 462,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "AttackCount",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "2"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill1",
+                    "ActionID"      : "skill1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 286,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_air_atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill2",
+                    "ActionID"      : "skill2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 285,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_hitground"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill3",
+                    "ActionID"      : "skill3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 285,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_xuanfengzhan"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk5",
+                    "ActionID"      : "atk5",
+                    "Enabled"       : true,
+                    "InterruptTime" : 285,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyCount",
+                            "Property"      : "AttackCount",
+                            "Count"         : 5,
+                            "CompareType"   : "ECT_Equal"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk1",
+                    "ActionID"      : "atk1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 560,
+                    "CheckAllCondition" : false,
+                    "ActorID"           : "7",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Torun",
+                    "ActionID"      : "run",
+                    "Enabled"       : true,
+                    "InterruptTime" : 559,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 559,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputRoll",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputJump",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputSwitchWeapon",
+                            "CompareVal"    : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "atk5",
+            "Name" : "atk5",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Attack",
+            "TotalTime"     : 633,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Attack_R_LV5",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlaySound",
+                    "EventData"   : {
+                        "SoundName" : "/prefabs/audio/player1002/atk5.prefab",
+                        "InstanceCount" : 3,
+                        "DelayTime"     : 0.0,
+                        "UseRandom"     : false,
+                        "RandomSoundList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 184,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/player1002/fx_skill_1_1.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_base",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 244,
+                    "EventType"   : "EET_ActionBreak",
+                    "EventData"   : {
+                        "EnableBreak" : true
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 569,
+                    "EventType"   : "EET_ActionBreak",
+                    "EventData"   : {
+                        "EnableBreak" : false
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 578,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "AttackCount",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "2"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill1",
+                    "ActionID"      : "skill1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 435,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_air_atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill2",
+                    "ActionID"      : "skill2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 435,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_hitground"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill3",
+                    "ActionID"      : "skill3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 436,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_xuanfengzhan"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk6",
+                    "ActionID"      : "atk6",
+                    "Enabled"       : true,
+                    "InterruptTime" : 435,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyCount",
+                            "Property"      : "AttackCount",
+                            "Count"         : 6,
+                            "CompareType"   : "ECT_Equal"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk1",
+                    "ActionID"      : "atk1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 632,
+                    "CheckAllCondition" : false,
+                    "ActorID"           : "7",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Torun",
+                    "ActionID"      : "run",
+                    "Enabled"       : true,
+                    "InterruptTime" : 630,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 631,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputRoll",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputJump",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputSwitchWeapon",
+                            "CompareVal"    : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "atk6",
+            "Name" : "atk6",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Attack",
+            "TotalTime"     : 1066,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Attack_R_LV6",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlaySound",
+                    "EventData"   : {
+                        "SoundName" : "/prefabs/audio/player1002/atk6.prefab",
+                        "InstanceCount" : 3,
+                        "DelayTime"     : 0.0,
+                        "UseRandom"     : false,
+                        "RandomSoundList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 867,
+                    "EventType"   : "EET_SetCustomProperty",
+                    "EventData"   : {
+                        "Property" : "AttackCount",
+                        "ValBool"  : false,
+                        "ValInt"   : 0,
+                        "ValFloat" : 0.0,
+                        "ValString" : ""
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill1",
+                    "ActionID"      : "skill1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1060,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_air_atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill2",
+                    "ActionID"      : "skill2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1060,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_hitground"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill3",
+                    "ActionID"      : "skill3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1060,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_xuanfengzhan"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk1",
+                    "ActionID"      : "atk1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1060,
+                    "CheckAllCondition" : false,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Torun",
+                    "ActionID"      : "run",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1060,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1060,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputRoll",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputJump",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputSwitchWeapon",
+                            "CompareVal"    : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "skill1",
+            "Name" : "skill1",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Skill",
+            "TotalTime"     : 2000,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Skill01_R_LV1",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlaySound",
+                    "EventData"   : {
+                        "SoundName" : "/prefabs/audio/player1002/skill1.prefab",
+                        "InstanceCount" : 3,
+                        "DelayTime"     : 0.0,
+                        "UseRandom"     : false,
+                        "RandomSoundList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 187,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/player1002/fx_skill_1_1.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_base",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 400,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Skill01_R_LV2",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "2"
+                },
+                {
+                    "TriggerTime" : 503,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/player1002/fx_skill_1_2.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_base",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 550,
+                    "EventType"   : "EET_Move",
+                    "EventData"   : {
+                        "IgnorMove" : false,
+                        "ResetVelocity" : true,
+                        "MoveDirType"   : "EMDT_Custom",
+                        "CustomDirection" : {
+                            "x" : 0.0,
+                            "y" : 1.0,
+                            "z" : 0.0
+                        },
+                        "MoveSpeedType"   : "EMST_Custom",
+                        "CustomSpeed"     : 15.0,
+                        "AnimDist"        : 0.0,
+                        "AnimTime"        : 0.0,
+                        "ResetAcc"        : true,
+                        "Acc"             : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 666,
+                    "EventType"   : "EET_Move",
+                    "EventData"   : {
+                        "IgnorMove" : false,
+                        "ResetVelocity" : true,
+                        "MoveDirType"   : "EMDT_Custom",
+                        "CustomDirection" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "MoveSpeedType"   : "EMST_Custom",
+                        "CustomSpeed"     : 0.0,
+                        "AnimDist"        : 0.0,
+                        "AnimTime"        : 0.0,
+                        "ResetAcc"        : true,
+                        "Acc"             : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 667,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Skill01_R_LV3",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "3"
+                },
+                {
+                    "TriggerTime" : 867,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/player1002/fx_skill_1_3.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_base",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 1095,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Skill01_R_LV4",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "4"
+                },
+                {
+                    "TriggerTime" : 1126,
+                    "EventType"   : "EET_Move",
+                    "EventData"   : {
+                        "IgnorMove" : false,
+                        "ResetVelocity" : true,
+                        "MoveDirType"   : "EMDT_Custom",
+                        "CustomDirection" : {
+                            "x" : 0.0,
+                            "y" : -1.0,
+                            "z" : 0.0
+                        },
+                        "MoveSpeedType"   : "EMST_UseAnim",
+                        "CustomSpeed"     : 0.0,
+                        "AnimDist"        : 2.0,
+                        "AnimTime"        : 0.272000014781952,
+                        "ResetAcc"        : true,
+                        "Acc"             : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 1366,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/player1002/fx_skill_1_4.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_base",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 1388,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/misc/fx_smoke.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_base",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "2"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill2",
+                    "ActionID"      : "skill2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1998,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_hitground"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill3",
+                    "ActionID"      : "skill3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1998,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_xuanfengzhan"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk1",
+                    "ActionID"      : "atk1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1998,
+                    "CheckAllCondition" : false,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Torun",
+                    "ActionID"      : "run",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1998,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1998,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputRoll",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputJump",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputSwitchWeapon",
+                            "CompareVal"    : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+                {
+                    "ID" : "skill1_1",
+                    "ActorID" : "1",
+                    "Name"    : "skill1_1",
+                    "Description" : "",
+                    "TriggerTime" : 233,
+                    "Delay"       : 0.0,
+                    "DeadActionChanged" : false,
+                    "AttackHitType"     : "EAHT_Normal",
+                    "EmitType"          : "EET_Normal",
+                    "EmitProperty"      : {
+                        "Num" : 1,
+                        "Interval" : 0.0,
+                        "Type"     : "EET_Interval",
+                        "PosType"  : "EEPT_AttackerCurrentPosAndTargetDir",
+                        "Dummy"    : "",
+                        "EmitOffset" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "EmitRotation" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "EntityType"        : "EET_FrameFan",
+                    "EntityProperty"    : {
+                        "Effect" : "",
+                        "Sound"  : "",
+                        "SoundCount" : 1,
+                        "Delay"      : 0.0,
+                        "Radius"     : 4.0,
+                        "Height"     : 4.0,
+                        "Degree"     : 180.0
+                    },
+                    "MotionAnimatorType" : "EMAT_None",
+                    "MotionAnimatorProperty" : {
+                    },
+                    "FeedbackList"           : [
+                        {
+                            "FeedbackType" : "EHT_HitDamage",
+                            "DamageType"   : "EDT_Normal"
+                        },
+                        {
+                            "FeedbackType" : "EHT_HitAction",
+                            "HitList"      : [
+                                {
+                                    "ActionID" : "hitout1",
+                                    "Weight"   : 50
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ID" : "skill1_2",
+                    "ActorID" : "1",
+                    "Name"    : "skill1_2",
+                    "Description" : "",
+                    "TriggerTime" : 582,
+                    "Delay"       : 0.0,
+                    "DeadActionChanged" : false,
+                    "AttackHitType"     : "EAHT_Normal",
+                    "EmitType"          : "EET_Normal",
+                    "EmitProperty"      : {
+                        "Num" : 1,
+                        "Interval" : 0.0,
+                        "Type"     : "EET_Interval",
+                        "PosType"  : "EEPT_AttackerCurrentPosAndTargetDir",
+                        "Dummy"    : "",
+                        "EmitOffset" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "EmitRotation" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "EntityType"        : "EET_FrameFan",
+                    "EntityProperty"    : {
+                        "Effect" : "",
+                        "Sound"  : "",
+                        "SoundCount" : 1,
+                        "Delay"      : 0.0,
+                        "Radius"     : 4.0,
+                        "Height"     : 4.0,
+                        "Degree"     : 180.0
+                    },
+                    "MotionAnimatorType" : "EMAT_None",
+                    "MotionAnimatorProperty" : {
+                    },
+                    "FeedbackList"           : [
+                        {
+                            "FeedbackType" : "EHT_HitDamage",
+                            "DamageType"   : "EDT_Normal"
+                        },
+                        {
+                            "FeedbackType" : "EHT_HitAction",
+                            "HitList"      : [
+                                {
+                                    "ActionID" : "hitout2",
+                                    "Weight"   : 50
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ID" : "skill1_3",
+                    "ActorID" : "1",
+                    "Name"    : "skill1_3",
+                    "Description" : "",
+                    "TriggerTime" : 966,
+                    "Delay"       : 0.0,
+                    "DeadActionChanged" : false,
+                    "AttackHitType"     : "EAHT_Normal",
+                    "EmitType"          : "EET_Normal",
+                    "EmitProperty"      : {
+                        "Num" : 1,
+                        "Interval" : 0.0,
+                        "Type"     : "EET_Interval",
+                        "PosType"  : "EEPT_AttackerCurrentPosAndTargetDir",
+                        "Dummy"    : "",
+                        "EmitOffset" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "EmitRotation" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "EntityType"        : "EET_FrameFan",
+                    "EntityProperty"    : {
+                        "Effect" : "",
+                        "Sound"  : "",
+                        "SoundCount" : 1,
+                        "Delay"      : 0.0,
+                        "Radius"     : 4.0,
+                        "Height"     : 4.0,
+                        "Degree"     : 180.0
+                    },
+                    "MotionAnimatorType" : "EMAT_None",
+                    "MotionAnimatorProperty" : {
+                    },
+                    "FeedbackList"           : [
+                        {
+                            "FeedbackType" : "EHT_HitDamage",
+                            "DamageType"   : "EDT_Normal"
+                        },
+                        {
+                            "FeedbackType" : "EHT_HitAction",
+                            "HitList"      : [
+                                {
+                                    "ActionID" : "hitout3",
+                                    "Weight"   : 50
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ID" : "skill1_4",
+                    "ActorID" : "1",
+                    "Name"    : "skill1_4",
+                    "Description" : "",
+                    "TriggerTime" : 1368,
+                    "Delay"       : 0.0,
+                    "DeadActionChanged" : false,
+                    "AttackHitType"     : "EAHT_Normal",
+                    "EmitType"          : "EET_Normal",
+                    "EmitProperty"      : {
+                        "Num" : 1,
+                        "Interval" : 0.0,
+                        "Type"     : "EET_Interval",
+                        "PosType"  : "EEPT_AttackerCurrentPosAndTargetDir",
+                        "Dummy"    : "",
+                        "EmitOffset" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "EmitRotation" : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        }
+                    },
+                    "EntityType"        : "EET_FrameFan",
+                    "EntityProperty"    : {
+                        "Effect" : "",
+                        "Sound"  : "",
+                        "SoundCount" : 1,
+                        "Delay"      : 0.0,
+                        "Radius"     : 4.0,
+                        "Height"     : 4.0,
+                        "Degree"     : 180.0
+                    },
+                    "MotionAnimatorType" : "EMAT_None",
+                    "MotionAnimatorProperty" : {
+                    },
+                    "FeedbackList"           : [
+                        {
+                            "FeedbackType" : "EHT_HitDamage",
+                            "DamageType"   : "EDT_Normal"
+                        },
+                        {
+                            "FeedbackType" : "EHT_HitAction",
+                            "HitList"      : [
+                                {
+                                    "ActionID" : "hitout4",
+                                    "Weight"   : 50
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ID" : "skill2",
+            "Name" : "skill2",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Skill",
+            "TotalTime"     : 1700,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Skill02_R_LV1",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlaySound",
+                    "EventData"   : {
+                        "SoundName" : "/prefabs/audio/player1002/skill2.prefab",
+                        "InstanceCount" : 3,
+                        "DelayTime"     : 0.0,
+                        "UseRandom"     : false,
+                        "RandomSoundList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 432,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/player1002/fx_skill_2_1.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_base",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 700,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Skill02_R_LV2",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "2"
+                },
+                {
+                    "TriggerTime" : 1054,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/player1002/fx_skill_1_2.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_base",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill1",
+                    "ActionID"      : "skill1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1692,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_air_atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill3",
+                    "ActionID"      : "skill3",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1692,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "4",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_xuanfengzhan"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk1",
+                    "ActionID"      : "atk1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1692,
+                    "CheckAllCondition" : false,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Torun",
+                    "ActionID"      : "run",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1692,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 1692,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputRoll",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputJump",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputSwitchWeapon",
+                            "CompareVal"    : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "skill3",
+            "Name" : "skill3",
+            "CanMove" : false,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Skill",
+            "TotalTime"     : 2534,
+            "DefaultAction" : "",
+            "Events"        : [
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Skill03_R_LV1",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 0,
+                    "EventType"   : "EET_PlaySound",
+                    "EventData"   : {
+                        "SoundName" : "/prefabs/audio/player1002/skill3.prefab",
+                        "InstanceCount" : 3,
+                        "DelayTime"     : 0.0,
+                        "UseRandom"     : false,
+                        "RandomSoundList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 696,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/player1002/fx_skill_3_1.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_base",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 1166,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "Skill03_R_LV2",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    },
+                    "ActorID"     : "2"
+                },
+                {
+                    "TriggerTime" : 1379,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/player1002/fx_atk_6_3.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "Bip001 R Hand",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                },
+                {
+                    "TriggerTime" : 1778,
+                    "EventType"   : "EET_PlayEffect",
+                    "EventData"   : {
+                        "EffectName" : "/prefabs/effect/player1002/fx_skill_3_1_2.prefab",
+                        "IsLoop"     : false,
+                        "LoopName"   : "",
+                        "DummyType"  : "EEDT_DummyFollow",
+                        "DummyRoot"  : "",
+                        "DummyAttach" : "dummy_base",
+                        "Position"    : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "Euler"       : {
+                            "x" : 0.0,
+                            "y" : 0.0,
+                            "z" : 0.0
+                        },
+                        "UseRandom"   : false,
+                        "RandomEffectList" : [
+                        ]
+                    },
+                    "ActorID"     : "1"
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "InterruptName" : "Toskill1",
+                    "ActionID"      : "skill1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 2530,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "2",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_air_atk"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toskill2",
+                    "ActionID"      : "skill2",
+                    "Enabled"       : true,
+                    "InterruptTime" : 2530,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "3",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyString",
+                            "Property"      : "InputSkill",
+                            "CompareVal"    : "skill_hitground"
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toatk1",
+                    "ActionID"      : "atk1",
+                    "Enabled"       : true,
+                    "InterruptTime" : 2530,
+                    "CheckAllCondition" : false,
+                    "ActorID"           : "6",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Torun",
+                    "ActionID"      : "run",
+                    "Enabled"       : true,
+                    "InterruptTime" : 2530,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "1",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : true
+                        }
+                    ]
+                },
+                {
+                    "InterruptName" : "Toidle",
+                    "ActionID"      : "idle",
+                    "Enabled"       : true,
+                    "InterruptTime" : 2530,
+                    "CheckAllCondition" : true,
+                    "ActorID"           : "5",
+                    "Conditions"        : [
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputRoll",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputMove",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputJump",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputAttack",
+                            "CompareVal"    : false
+                        },
+                        {
+                            "InterruptType" : "EIT_CheckCustomPropertyBool",
+                            "Property"      : "InputSwitchWeapon",
+                            "CompareVal"    : false
+                        }
+                    ]
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        }
+    ]
+}

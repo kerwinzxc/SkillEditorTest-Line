@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: player1001
+  m_Shader: {fileID: 4800000, guid: f11b1da5abc41b74ca9d85610845d407, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BRDFTex:
+        m_Texture: {fileID: 2800000, guid: 2ad25bc371ee08840887c146714df968, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bump:
+        m_Texture: {fileID: 2800000, guid: 1b82b763dbd5a8d4fb6c1212dbc518a2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 1b82b763dbd5a8d4fb6c1212dbc518a2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Diffuse:
+        m_Texture: {fileID: 2800000, guid: a737eaff2cb1fe04daef3c88d37b48ac, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a737eaff2cb1fe04daef3c88d37b48ac, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_14:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_19:
+        m_Texture: {fileID: 2800000, guid: 1b82b763dbd5a8d4fb6c1212dbc518a2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_2:
+        m_Texture: {fileID: 2800000, guid: a737eaff2cb1fe04daef3c88d37b48ac, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Cutoff: 0.5
+    - _Glossiness: 512
+    - _RimPower: 4.78
+    - _Shininess: 0.030000003
+    - _SpecularPower: 1
+    - _node_12: 1
+    - _node_52: 0.5263158
+    m_Colors:
+    - _AmbientColor: {r: 0.11764705, g: 0.08858131, b: 0.044982698, a: 1}
+    - _Color: {r: 0.9955375, g: 1, b: 0.9191176, a: 1}
+    - _RimColor: {r: 0, g: 0.30725163, b: 0.6102941, a: 1}
+    - _SpecColor: {r: 1, g: 0.99264705, b: 0.99264705, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
