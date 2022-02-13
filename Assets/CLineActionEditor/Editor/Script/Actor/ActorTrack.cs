@@ -177,6 +177,10 @@ namespace SuperCLine.ActionEngine.Editor
                 if (EditorGUI.EndChangeCheck() && !string.IsNullOrEmpty(newName))
                 {
                     itemName = newName;
+                    foreach (var actorEvent in _eventList)
+                    {
+                        actorEvent.eventProperty.TrackName = itemName;
+                    }
                 }
             }
 
