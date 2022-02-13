@@ -9,6 +9,7 @@ namespace SuperCLine.ActionEngine
         public List<string> ParameterList { get; private set; }
         public Dictionary<string, UnitAnimatorData> StateHash { get; private set; }
         public List<string> StateNameList { get; private set; }
+        public float Speed { get; set; }
 
         private Animator animator;
 
@@ -18,6 +19,8 @@ namespace SuperCLine.ActionEngine
             StateHash = new Dictionary<string, UnitAnimatorData>();
             StateNameList = new List<string>();
         }
+
+        public int LayerCount => animator.layerCount;
 
         public void Init(GameObject go)
         {
@@ -63,6 +66,41 @@ namespace SuperCLine.ActionEngine
         public void Play(string animationClipName)
         {
             animator.Play(animationClipName, 0, 0);
+        }
+
+        public void Play(string animationClipName, int layer, float normalizedTime)
+        {
+            animator.Play(animationClipName, layer, normalizedTime);
+        }
+
+        public void CrossFade(string animationClipName, float transitionDuration, int layer, float normalizedTime)
+        {
+            animator.CrossFade(animationClipName, transitionDuration, layer, normalizedTime);
+        }
+
+        public void SetLayerWeight(int layer, float weight)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SetBool(string paramName, bool value)
+        {
+            animator.SetBool(paramName, value);
+        }
+
+        public void SetInteger(string paramName, int value)
+        {
+            animator.SetInteger(paramName, value);
+        }
+
+        public void SetFloat(string paramName, float value)
+        {
+            animator.SetFloat(paramName, value);
+        }
+
+        public void SetTrigger(string paramName)
+        {
+            animator.SetTrigger(paramName);
         }
     }
 

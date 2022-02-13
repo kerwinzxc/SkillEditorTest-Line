@@ -40,9 +40,10 @@ namespace SuperCLine.ActionEngine
         [SerializeField] private EPlayerSex mPlayerSex;
         [SerializeField] private List<string> mVictoryActionList = new List<string>();
         [SerializeField] private string mActionGroup;
+        [SerializeField] private string mAnimatorTypeName;
 
         #region property
-        [EditorProperty("ResID(资源ID)", EditorPropertyType.EEPT_String, Edit = false)]
+        [EditorProperty("ResID(资源ID)", EditorPropertyType.EEPT_String)]
         public string ID
         {
             get { return mID; }
@@ -90,6 +91,12 @@ namespace SuperCLine.ActionEngine
             get { return mActionGroup; }
             set { mActionGroup = value; }
         }
+        [EditorProperty("动画控制器类名", EditorPropertyType.EEPT_AnimatorTypeName)]
+        public string AnimatorTypeName
+        {
+            get { return mAnimatorTypeName; }
+            set { mAnimatorTypeName = value; }
+        }
         #endregion
 
         public string DebugName
@@ -107,6 +114,7 @@ namespace SuperCLine.ActionEngine
             mPlayerSex = JsonHelper.ReadEnum<EPlayerSex>(jd["PlayerSex"]);
             mVictoryActionList = JsonHelper.ReadListString(jd["VictoryActionList"]);
             mActionGroup = JsonHelper.ReadString(jd["ActionGroup"]);
+            mAnimatorTypeName = JsonHelper.ReadString(jd["AnimatorTypeName"]);
         }
         public JsonWriter Serialize(JsonWriter writer)
         {
@@ -119,6 +127,7 @@ namespace SuperCLine.ActionEngine
             JsonHelper.WriteProperty(ref writer, "PlayerSex", mPlayerSex.ToString());
             JsonHelper.WriteProperty(ref writer, "VictoryActionList", mVictoryActionList);
             JsonHelper.WriteProperty(ref writer, "ActionGroup", mActionGroup);
+            JsonHelper.WriteProperty(ref writer, "AnimatorTypeName", mAnimatorTypeName);
             writer.WriteObjectEnd();
 
             return writer;

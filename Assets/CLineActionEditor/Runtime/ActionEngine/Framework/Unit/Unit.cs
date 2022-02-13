@@ -16,6 +16,8 @@
 |
 +-----------------------------------------------------------------------------*/
 
+using Codice.Client.BaseCommands;
+
 namespace SuperCLine.ActionEngine
 {
     using UnityEngine;
@@ -269,7 +271,8 @@ namespace SuperCLine.ActionEngine
         { get; set; }
         #endregion
 
-            #region func
+        #region func
+
         public void SetPosition(Vector3 pos)
         {
             UUnit.transform.position = pos;
@@ -377,7 +380,7 @@ namespace SuperCLine.ActionEngine
                 return;
 
             ActionStatus.RestrictFrozen = timer;
-            float curspeed = UUnit.Anim.speed;
+            float curspeed = UUnit.Anim.Speed;
             UUnit.SetAnimationSpeed(speed);
 
             if (timer)
@@ -396,7 +399,7 @@ namespace SuperCLine.ActionEngine
                 return;
 
             ActionStatus.RestrictFrozen = timer;
-            float curspeed = UUnit.Anim.speed;
+            float curspeed = UUnit.Anim.Speed;
             UUnit.SetAnimationSpeed(speed);
 
             if (timer)
@@ -574,6 +577,7 @@ namespace SuperCLine.ActionEngine
         }
         #endregion
 
+        public abstract string AnimatorTypeName { get; }
         public abstract EUnitType UnitType { get; }
         public abstract string ModelName { get; }
         public abstract void InitProperty(string resID);
@@ -694,7 +698,7 @@ namespace SuperCLine.ActionEngine
             mUObject = go.GetComponent<UUnit>();
             if (mUObject == null)
                 mUObject = go.AddComponent<UUnit>();
-            mUObject.Owner = this;
+            mUObject.SetUnit(this);
 
             if (!string.IsNullOrEmpty(debugName))
             {
@@ -778,9 +782,9 @@ namespace SuperCLine.ActionEngine
             if (!string.IsNullOrEmpty(wp.Property.SetupAction))
             {
                 bool changeaction = true;
-                if (this is Player)
+                if (this is PlayerBase)
                 {
-                    Player p = this as Player;
+                    PlayerBase p = this as PlayerBase;
                     if (p.ActionStatus.ActiveAction.ActionStatus == EActionState.Skill)
                         changeaction = false;
                 }

@@ -10,7 +10,8 @@
             "PlayerSex"     : "EPS_Man",
             "VictoryActionList" : [
             ],
-            "ActionGroup"       : "player1001"
+            "ActionGroup"       : "player1001",
+            "AnimatorTypeName"  : "SuperCLine.ActionEngine.UnitUnityAnimator"
         },
         {
             "ID" : "2",
@@ -21,18 +22,20 @@
             "PlayerSex"     : "EPS_Man",
             "VictoryActionList" : [
             ],
-            "ActionGroup"       : "player1002"
+            "ActionGroup"       : "player1002",
+            "AnimatorTypeName"  : "SuperCLine.ActionEngine.UnitUnityAnimator"
         },
         {
-            "ID" : "",
+            "ID" : "3",
             "Name" : "player1003",
             "Description" : "",
             "Prefab"      : "/prefabs/player/player1003.prefab",
-            "StartupAction" : "",
+            "StartupAction" : "idle",
             "PlayerSex"     : "EPS_Man",
             "VictoryActionList" : [
             ],
-            "ActionGroup"       : "player1003"
+            "ActionGroup"       : "player1003",
+            "AnimatorTypeName"  : "UnitSpineAnimator"
         }
     ]
 }

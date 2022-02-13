@@ -1,0 +1,41 @@
+
+{
+    "ActionInterrupts" : [
+        {
+            "InterruptName" : "Toidle",
+            "ActionID"      : "idle",
+            "Enabled"       : true,
+            "CheckAllCondition" : true,
+            "CrossFadeDuration" : 0.0,
+            "Conditions"        : [
+            ]
+        },
+        {
+            "InterruptName" : "Towalk",
+            "ActionID"      : "walk",
+            "Enabled"       : true,
+            "CheckAllCondition" : true,
+            "CrossFadeDuration" : 0.0,
+            "Conditions"        : [
+            ]
+        },
+        {
+            "InterruptName" : "Toatk",
+            "ActionID"      : "atk",
+            "Enabled"       : true,
+            "CheckAllCondition" : true,
+            "CrossFadeDuration" : 0.0,
+            "Conditions"        : [
+            ]
+        },
+        {
+            "InterruptName" : "Todead",
+            "ActionID"      : "dead",
+            "Enabled"       : false,
+            "CheckAllCondition" : true,
+            "CrossFadeDuration" : 0.0,
+            "Conditions"        : [
+            ]
+        }
+    ]
+}

@@ -96,18 +96,18 @@ namespace SuperCLine.ActionEngine
             {
                 case "rpg":
                     {
-                        Unit p = UnitMgr.Instance.CreateUnit(EUnitType.EUT_Player, "1", Vector3.zero, 0f, ECampType.EFT_Friend);
+                        Unit p = UnitMgr.Instance.CreateUnit(EUnitType.EUT_Player, "3", Vector3.zero, 0f, ECampType.EFT_Friend);
                         // camera
                         CameraMgr.Instance.BindCamera();
                         CameraMgr.Instance.BindCtrl(ECameraCtrlType.ECCT_SmoothFollow, p.UObject);
                         InputMgr.Instance.Controller = p;
 
-                        p.UseWeapon("WQ01001");
+                        // p.UseWeapon("WQ01001");
 
                         // 添加天赋 - 移动速度+10%
                         p.AddBuff("1");
 
-                        UnitMgr.Instance.CreateUnit(EUnitType.EUT_Monster, "1", new Vector3(0, 0, 12f), 0, ECampType.EFT_Enemy);
+                        UnitMgr.Instance.CreateUnit(EUnitType.EUT_Monster, "3", Vector3.right * 2, 0, ECampType.EFT_Enemy);
 
                         AudioMgr.Instance.PlayMusic("/Prefabs/Audio/bgm_battle1.prefab", true, 5f);
                     }

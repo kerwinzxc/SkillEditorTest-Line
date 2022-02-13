@@ -74,9 +74,10 @@ namespace SuperCLine.ActionEngine
             set { mWeapon = value; }
         }
 
-        public bool BuildUnit(IProperty property, string animatorTypeName)
+        public bool BuildUnit(IProperty property)
         {
             string prefabname = string.Empty;
+            string animatorTypeName = string.Empty;
             if (mUnit != null)
             {
                 GameObject.DestroyImmediate(mUnit);
@@ -86,16 +87,18 @@ namespace SuperCLine.ActionEngine
             {
                 PlayerProperty p = property as PlayerProperty;
                 prefabname = p.Prefab;
+                animatorTypeName = p.AnimatorTypeName;
                 mActionGroupName = p.ActionGroup;
             }
             else if (property is MonsterProperty)
             {
                 MonsterProperty m = property as MonsterProperty;
                 prefabname = m.Prefab;
+                animatorTypeName = m.AnimatorTypeName;
                 mActionGroupName = m.ActionGroup;
             }
 
-            if (string.IsNullOrEmpty(prefabname) || string.IsNullOrEmpty(mActionGroupName))
+            if (string.IsNullOrEmpty(prefabname) || string.IsNullOrEmpty(animatorTypeName) || string.IsNullOrEmpty(mActionGroupName))
             {
                 LogMgr.Instance.Log(ELogType.ELT_ERROR, "ActionEditor", "please set prefab or action group name!");
                 return false;

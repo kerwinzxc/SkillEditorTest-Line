@@ -1,33 +1,18 @@
-﻿/*------------------------------------------------------------------------------
-|
-| COPYRIGHT (C) 2018 - 2026 All Right Reserved
-|
-| FILE NAME  : \Assets\CLineActionEditor\ActionEngine\Framework\Unit\Player.cs
-| AUTHOR     : https://supercline.com/
-| PURPOSE    : 
-|
-| SPEC       : 
-|
-| MODIFICATION HISTORY
-| 
-| Ver	   Date			   By			   Details
-| -----    -----------    -------------   ----------------------
-| 1.0	   2019-4-4      SuperCLine           Created
-|
-+-----------------------------------------------------------------------------*/
-
-using System;
 using UnityEngine;
-
 namespace SuperCLine.ActionEngine
 {
     using NumericalType = System.Double;
 
-    public class Player : Unit
+    public class Player2D : PlayerBase
     {
         private Vector2 mInputMoveDir = Vector2.zero;
         protected PlayerProperty mProperty = null;
         private TargetStatus mTargetSystem = null;
+
+        public override string AnimatorTypeName
+        {
+            get { return mProperty.AnimatorTypeName; }
+        }
 
         public override string ModelName
         {
@@ -44,9 +29,8 @@ namespace SuperCLine.ActionEngine
             mProperty = PropertyMgr.Instance.GetPlayerProperty(resID);
         }
 
-        public Player() : base()
+        public Player2D() : base()
         {
-
         }
 
         protected override void OnDispose()
@@ -74,10 +58,10 @@ namespace SuperCLine.ActionEngine
             EnableCollision = true;
 
             // hud
-            Transform hud = Helper.Find(UObject, "hud");
-            EBloodType bloodType = campType == ECampType.EFT_Friend ? EBloodType.EBT_Green : EBloodType.EBT_Red;
-            HudBlood = HudMgr.Instance.GetHudBlood(hud, bloodType);
-            HudText = HudMgr.Instance.GetHudText(hud);
+            // Transform hud = Helper.Find(UObject, "hud");
+            // EBloodType bloodType = campType == ECampType.EFT_Friend ? EBloodType.EBT_Green : EBloodType.EBT_Red;
+            // HudBlood = HudMgr.Instance.GetHudBlood(hud, bloodType);
+            // HudText = HudMgr.Instance.GetHudText(hud);
 
             // custom variable
             PropertyContext.AddProperty(PropertyName.sInputMove, ETAnyType.Bool);
@@ -182,47 +166,56 @@ namespace SuperCLine.ActionEngine
         {
             base.AddHP(hp, result);
 
-            if (!IsDead)
-            {
-                HudText.ShowText(EHudType.EHT_PlayerBehurt, hp, 0);
-                HudBlood.Progress = (float)(Attrib.CurHP / GetAttribute(EAttributeType.EAT_MaxHp));
-            }
-            else
-            {
-                if (null != HudBlood)
-                {
-                    HudMgr.Instance.CycleHudBlood(HudBlood);
-                    HudBlood = null;
-                }
-            }
+            // if (!IsDead)
+            // {
+            //     HudText.ShowText(EHudType.EHT_PlayerBehurt, hp, 0);
+            //     HudBlood.Progress = (float)(Attrib.CurHP / GetAttribute(EAttributeType.EAT_MaxHp));
+            // }
+            // else
+            // {
+            //     if (null != HudBlood)
+            //     {
+            //         HudMgr.Instance.CycleHudBlood(HudBlood);
+            //         HudBlood = null;
+            //     }
+            // }
         }
 
         public override void LocalMove(Vector2 move)
         {
-            Vector3 camDir = CameraMgr.Instance.Camera.transform.forward * move.y + CameraMgr.Instance.Camera.transform.right * move.x;
-
-            Vector3 moveDir = camDir.normalized * Attrib.CurSpeed * Time.deltaTime;
-            float x = moveDir.x;
-            float z = moveDir.z;
-
-            mInputMoveDir.x = x;
-            mInputMoveDir.y = z;
-
-            Helper.Rotate(ref x, ref z, 0, false);
-            if (ActionStatus.CanRotate && !(ActionStatus.FaceTarget && Target != null))
-            {
-                SetOrientation(Mathf.Atan2(x, z), false, true);
-            }
+            // Vector3 camDir = CameraMgr.Instance.Camera.transform.forward * move.y + CameraMgr.Instance.Camera.transform.right * move.x;
+            //
+            // Vector3 moveDir = camDir.normalized * Attrib.CurSpeed * Time.deltaTime;
+            // float x = moveDir.x;
+            // float z = moveDir.z;
+            //
+            // mInputMoveDir.x = x;
+            // mInputMoveDir.y = z;
+            //
+            // Helper.Rotate(ref x, ref z, 0, false);
+            // if (ActionStatus.CanRotate && !(ActionStatus.FaceTarget && Target != null))
+            // {
+            //     SetOrientation(Mathf.Atan2(x, z), false, true);
+            // }
 
             if (ActionStatus.CanMove)
             {
+                // if (ActionStatus.ActiveAction.ActionStatus == EActionState.Jump && !OnGround)
+                // {
+                //     Move(new Vector3(x, 0f, z));
+                // }
+                // else
+                // {
+                //     Move(new Vector3(x, -UController.stepOffset, z));
+                // }
+                var speed = move.normalized * Attrib.CurSpeed * Time.deltaTime;
                 if (ActionStatus.ActiveAction.ActionStatus == EActionState.Jump && !OnGround)
                 {
-                    Move(new Vector3(x, 0f, z));
+                    Move(new Vector3(speed.x, speed.y, 0));
                 }
                 else
                 {
-                    Move(new Vector3(x, -UController.stepOffset, z));
+                    Move(new Vector3(speed.x, speed.y-UController.stepOffset, 0));
                 }
             }
 

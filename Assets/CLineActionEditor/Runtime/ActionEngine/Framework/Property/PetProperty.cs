@@ -29,6 +29,7 @@ namespace SuperCLine.ActionEngine
     {
         [SerializeField] private string mID;
         [SerializeField] private string mName;
+        [SerializeField] private string mAnimatorTypeName;
         [SerializeReference] private List<AISwitch> mAISwitch;
 
         #region property
@@ -37,6 +38,12 @@ namespace SuperCLine.ActionEngine
         {
             get { return mID; }
             set { mID = value; }
+        }
+        [EditorProperty("动画控制器类名", EditorPropertyType.EEPT_AnimatorTypeName)]
+        public string AnimatorTypeName
+        {
+            get { return mAnimatorTypeName; }
+            set { mAnimatorTypeName = value; }
         }
         #endregion
 

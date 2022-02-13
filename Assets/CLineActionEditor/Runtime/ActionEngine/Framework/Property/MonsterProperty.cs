@@ -31,6 +31,7 @@ namespace SuperCLine.ActionEngine
         [SerializeField] private string mStartupAI;
         [SerializeField] private string mStartupWeapon;
         [SerializeField] private string mActionGroup;
+        [SerializeField] private string mAnimatorTypeName;
         [SerializeReference] private List<AISwitch> mAISwitch = new List<AISwitch>();
 
 
@@ -77,6 +78,12 @@ namespace SuperCLine.ActionEngine
             get { return mActionGroup; }
             set { mActionGroup = value; }
         }
+        [EditorProperty("动画控制器类名", EditorPropertyType.EEPT_AnimatorTypeName)]
+        public string AnimatorTypeName
+        {
+            get { return mAnimatorTypeName; }
+            set { mAnimatorTypeName = value; }
+        }
         #endregion
 
 
@@ -100,6 +107,7 @@ namespace SuperCLine.ActionEngine
             mStartupAI = JsonHelper.ReadString(jd["StartupAI"]);
             mStartupWeapon = JsonHelper.ReadString(jd["StartupWeapon"]);
             mActionGroup = JsonHelper.ReadString(jd["ActionGroup"]);
+            mAnimatorTypeName = JsonHelper.ReadString(jd["AnimatorTypeName"]);
 
             JsonData jdAI = jd["AISwitchs"];
             for (int i = 0; i < jdAI.Count; ++i)
@@ -120,6 +128,7 @@ namespace SuperCLine.ActionEngine
             JsonHelper.WriteProperty(ref writer, "StartupAI", mStartupAI);
             JsonHelper.WriteProperty(ref writer, "StartupWeapon", mStartupWeapon);
             JsonHelper.WriteProperty(ref writer, "ActionGroup", mActionGroup);
+            JsonHelper.WriteProperty(ref writer, "AnimatorTypeName", mAnimatorTypeName);
 
             writer.WritePropertyName("AISwitchs");
             writer.WriteArrayStart();

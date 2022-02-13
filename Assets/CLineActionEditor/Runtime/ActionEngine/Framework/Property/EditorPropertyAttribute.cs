@@ -37,6 +37,7 @@ namespace SuperCLine.ActionEngine
         EEPT_GameObject,
 
         //popup list string
+        EEPT_AnimatorTypeName,
         EEPT_AnimatorState,
         EEPT_AnimatorParam,
         EEPT_CustomProperty,

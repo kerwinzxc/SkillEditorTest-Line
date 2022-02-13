@@ -327,6 +327,11 @@ namespace SuperCLine.ActionEngine.Editor
                             case EditorPropertyType.EEPT_Enum:
                                 Helper.SetProperty(obj, pis[i].Name, EditorGUILayout.EnumPopup((Enum)val));
                                 break;
+                            case EditorPropertyType.EEPT_AnimatorTypeName:
+                                {
+                                    PopupList(obj, pis[i].Name, val, AnimatorTypeNameList);
+                                }
+                                break;
                             case EditorPropertyType.EEPT_AnimatorState:
                                 {
                                     PopupList(obj, pis[i].Name, val, UnitWrapper.Instance.StateNameList);

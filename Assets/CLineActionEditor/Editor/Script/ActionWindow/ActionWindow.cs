@@ -21,6 +21,7 @@ namespace SuperCLine.ActionEngine.Editor
     using UnityEngine;
     using UnityEditor;
     using System.IO;
+    using System.Collections.Generic;
     using UnityEditor.SceneManagement;
 
     internal sealed partial class ActionWindow : EditorWindow
@@ -87,6 +88,24 @@ namespace SuperCLine.ActionEngine.Editor
                     _editorResourcePath = Path.Combine(root, "Editor/Editor Resources");
                 }
                 return _editorResourcePath;
+            }
+        }
+
+        private List<string> _animatorTypeNameList;
+
+        public List<string> AnimatorTypeNameList
+        {
+            get
+            {
+                if (_animatorTypeNameList == null)
+                {
+                    _animatorTypeNameList = new List<string>();
+                    foreach (var typeName in Utility.Type.GetRuntimeTypeNames(typeof(IUnitAnimator)))
+                    {
+                        _animatorTypeNameList.Add(typeName);
+                    }
+                }
+                return _animatorTypeNameList;
             }
         }
     }

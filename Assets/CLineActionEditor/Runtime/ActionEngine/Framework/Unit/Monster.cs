@@ -30,6 +30,11 @@ namespace SuperCLine.ActionEngine
         protected AIStatus mAI = null;
         private TargetHateStatus mTargetSystem = null;
 
+        public override string AnimatorTypeName
+        {
+            get { return mProperty.AnimatorTypeName; }
+        }
+        
         public override string ModelName
         {
             get { return mProperty.Prefab; }

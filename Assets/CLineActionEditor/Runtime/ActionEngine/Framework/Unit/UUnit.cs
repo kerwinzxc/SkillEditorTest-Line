@@ -23,19 +23,31 @@ namespace SuperCLine.ActionEngine
 
     public sealed class UUnit : MonoBehaviour
     {
-        public Unit Owner;
-        private Animator mAnim;
+        private Unit mOwner;
+        public Unit Owner { get { return mOwner; } }
+        private IUnitAnimator mAnim;
         private float mAnimSpeed;
 
-        public Animator Anim
+        public IUnitAnimator Anim
         {
             get { return mAnim; }
         }
 
-        void Awake()
+        public void SetUnit(Unit unit)
         {
-            mAnim = transform.GetComponent<Animator>();
-            mAnimSpeed = mAnim.speed;
+            mOwner = unit;
+            var animatorTypeName = mOwner.AnimatorTypeName;
+            if (string.IsNullOrEmpty(animatorTypeName))
+            {
+                LogMgr.Instance.Logf(ELogType.ELT_ERROR, "Unit", "animator type name is null.");
+                animatorTypeName = "SuperCLine.ActionEngine.UnitUnityAnimator";
+                return;
+            }
+            System.Type type = Utility.Assembly.GetType(animatorTypeName);
+            var ins = System.Activator.CreateInstance(type);
+            mAnim = ins as IUnitAnimator;
+            mAnim.Init(gameObject);
+            mAnimSpeed = mAnim.Speed;
         }
 
         public void PlayAnimation(EAnimType type, string name, string value)
@@ -90,17 +102,17 @@ namespace SuperCLine.ActionEngine
 
             if (speed < 0)
             {
-                mAnim.speed = mAnimSpeed;
+                mAnim.Speed = mAnimSpeed;
             }
             else
             {
-                mAnim.speed = speed;
+                mAnim.Speed = speed;
             }
         }
 
         public void SetAnimatorLayerWeight(int layer = 1, int weight = 0)
         {
-            if (mAnim.layerCount > layer)
+            if (mAnim.LayerCount > layer)
                 mAnim.SetLayerWeight(layer, weight);
         }
 

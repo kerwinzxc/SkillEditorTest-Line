@@ -103,7 +103,7 @@ namespace SuperCLine.ActionEngine.Editor
                 return;
             }
 
-            if (!UnitWrapper.Instance.BuildUnit(selectProperty.property, animatorTypeName))
+            if (!UnitWrapper.Instance.BuildUnit(selectProperty.property))
             {
                 return;
             }

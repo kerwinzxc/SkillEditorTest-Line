@@ -4,8 +4,8 @@
         {
             "InterruptName" : "Toidle",
             "ActionID"      : "idle",
-            "Enabled"       : false,
-            "CheckAllCondition" : false,
+            "Enabled"       : true,
+            "CheckAllCondition" : true,
             "CrossFadeDuration" : 0.0,
             "Conditions"        : [
             ]
