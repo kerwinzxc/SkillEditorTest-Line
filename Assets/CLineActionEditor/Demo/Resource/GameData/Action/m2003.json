@@ -32,6 +32,92 @@
                 }
             ],
             "Interrupts"    : [
+                {
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : false,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Toatk",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "atk"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Towalk",
+                    "TrackIndex" : 2,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Towalk",
+                        "ActionID"      : "walk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "walk"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 967,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "idle"
+                            }
+                        ]
+                    }
+                }
             ],
             "AttackDefs"    : [
             ]
@@ -48,7 +134,7 @@
             "IsGod"         : false,
             "Level"         : 0,
             "ActionStatus"  : "Move",
-            "TotalTime"     : 1183,
+            "TotalTime"     : 1067,
             "DefaultAction" : "idle",
             "Events"        : [
                 {
@@ -67,6 +153,92 @@
                 }
             ],
             "Interrupts"    : [
+                {
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Toatk",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "atk"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Towalk",
+                    "TrackIndex" : 2,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Towalk",
+                        "ActionID"      : "walk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "walk"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 1067,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "idle"
+                            }
+                        ]
+                    }
+                }
             ],
             "AttackDefs"    : [
             ]
@@ -83,7 +255,7 @@
             "IsGod"         : false,
             "Level"         : 0,
             "ActionStatus"  : "Attack",
-            "TotalTime"     : 1666,
+            "TotalTime"     : 400,
             "DefaultAction" : "idle",
             "Events"        : [
                 {
@@ -102,6 +274,92 @@
                 }
             ],
             "Interrupts"    : [
+                {
+                    "TrackName" : "Todead",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Todead",
+                        "ActionID"      : "dead",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckDead"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "",
+                    "TrackIndex" : 1,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 367,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "atk"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Towalk",
+                    "TrackIndex" : 2,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Towalk",
+                        "ActionID"      : "walk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "walk"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 400,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyString",
+                                "Property"      : "AI",
+                                "CompareVal"    : "idle"
+                            }
+                        ]
+                    }
+                }
             ],
             "AttackDefs"    : [
             ]

@@ -5,7 +5,7 @@
             "ID" : "idle",
             "Name" : "idle",
             "CanMove" : true,
-            "CanRotate" : false,
+            "CanRotate" : true,
             "CanHurt"   : true,
             "CanHit"    : true,
             "IgnoreGravity" : false,
@@ -17,7 +17,7 @@
             "DefaultAction" : "idle",
             "Events"        : [
                 {
-                    "TrackName" : "",
+                    "TrackName" : "idle",
                     "TrackIndex" : 0,
                     "TriggerType" : "Duration",
                     "TriggerTime" : 0,
@@ -32,6 +32,272 @@
                 }
             ],
             "Interrupts"    : [
+                {
+                    "TrackName" : "Toatk",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : false,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputAttack",
+                                "CompareVal"    : true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Torun",
+                    "TrackIndex" : 4,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Torun",
+                        "ActionID"      : "run",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputMove",
+                                "CompareVal"    : true
+                            }
+                        ]
+                    }
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "run",
+            "Name" : "run",
+            "CanMove" : true,
+            "CanRotate" : true,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : false,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Move",
+            "TotalTime"     : 466,
+            "DefaultAction" : "run",
+            "Events"        : [
+                {
+                    "TrackName" : "run",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
+                    "TriggerTime" : 0,
+                    "Duration"    : 533,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "run",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    }
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "TrackName" : "Toatk",
+                    "TrackIndex" : 3,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toatk",
+                        "ActionID"      : "atk",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : false,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputAttack",
+                                "CompareVal"    : true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 4,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 0,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputRoll",
+                                "CompareVal"    : false
+                            },
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputMove",
+                                "CompareVal"    : false
+                            },
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputJump",
+                                "CompareVal"    : false
+                            },
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputAttack",
+                                "CompareVal"    : false
+                            },
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputSwitchWeapon",
+                                "CompareVal"    : false
+                            }
+                        ]
+                    }
+                }
+            ],
+            "AttackDefs"    : [
+            ]
+        },
+        {
+            "ID" : "atk",
+            "Name" : "atk",
+            "CanMove" : false,
+            "CanRotate" : false,
+            "CanHurt"   : true,
+            "CanHit"    : true,
+            "IgnoreGravity" : false,
+            "FaceTarget"    : true,
+            "IsGod"         : false,
+            "Level"         : 0,
+            "ActionStatus"  : "Attack",
+            "TotalTime"     : 366,
+            "DefaultAction" : "atk",
+            "Events"        : [
+                {
+                    "TrackName" : "attack",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Duration",
+                    "TriggerTime" : 0,
+                    "Duration"    : 400,
+                    "EventType"   : "EET_PlayAnim",
+                    "EventData"   : {
+                        "AnimName" : "attack",
+                        "AnimType" : "EAT_Force",
+                        "TriggerName" : "",
+                        "TriggerValue" : ""
+                    }
+                },
+                {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 104,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_SetCustomPropertyString",
+                    "EventData"   : {
+                        "Property" : "VarStringTag",
+                        "Val"      : "atk1"
+                    }
+                },
+                {
+                    "TrackName" : "",
+                    "TrackIndex" : 0,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 321,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_SetCustomPropertyString",
+                    "EventData"   : {
+                        "Property" : "VarStringTag",
+                        "Val"      : ""
+                    }
+                }
+            ],
+            "Interrupts"    : [
+                {
+                    "TrackName" : "Torun",
+                    "TrackIndex" : 4,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 359,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Torun",
+                        "ActionID"      : "run",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputMove",
+                                "CompareVal"    : true
+                            }
+                        ]
+                    }
+                },
+                {
+                    "TrackName" : "Toidle",
+                    "TrackIndex" : 5,
+                    "TriggerType" : "Signal",
+                    "TriggerTime" : 359,
+                    "Duration"    : 0,
+                    "EventType"   : "EET_Interrupt",
+                    "EventData"   : {
+                        "InterruptName" : "Toidle",
+                        "ActionID"      : "idle",
+                        "Enabled"       : true,
+                        "CheckAllCondition" : true,
+                        "CrossFadeDuration" : 0.0,
+                        "Conditions"        : [
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputRoll",
+                                "CompareVal"    : false
+                            },
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputMove",
+                                "CompareVal"    : false
+                            },
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputJump",
+                                "CompareVal"    : false
+                            },
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputAttack",
+                                "CompareVal"    : false
+                            },
+                            {
+                                "InterruptType" : "EIT_CheckCustomPropertyBool",
+                                "Property"      : "InputSwitchWeapon",
+                                "CompareVal"    : false
+                            }
+                        ]
+                    }
+                }
             ],
             "AttackDefs"    : [
             ]

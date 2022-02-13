@@ -8,6 +8,59 @@
             "CheckAllCondition" : true,
             "CrossFadeDuration" : 0.0,
             "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputRoll",
+                    "CompareVal"    : false
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputMove",
+                    "CompareVal"    : false
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputJump",
+                    "CompareVal"    : false
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputAttack",
+                    "CompareVal"    : false
+                },
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputSwitchWeapon",
+                    "CompareVal"    : false
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Torun",
+            "ActionID"      : "run",
+            "Enabled"       : true,
+            "CheckAllCondition" : true,
+            "CrossFadeDuration" : 0.0,
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputMove",
+                    "CompareVal"    : true
+                }
+            ]
+        },
+        {
+            "InterruptName" : "Toatk",
+            "ActionID"      : "atk",
+            "Enabled"       : true,
+            "CheckAllCondition" : true,
+            "CrossFadeDuration" : 0.0,
+            "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyBool",
+                    "Property"      : "InputAttack",
+                    "CompareVal"    : true
+                }
             ]
         }
     ]

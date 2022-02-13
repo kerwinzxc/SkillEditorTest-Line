@@ -32,8 +32,8 @@ namespace SuperCLine.ActionEngine
         {
             smoothXOZ = 0.1f;
             smoothY = 0.6f;
-            offset = new Vector3(0, 3.5f, -6.5f);
-            euler = new Vector3(20, 0, 0);
+            offset = new Vector3(0, 5, -10);
+            euler = new Vector3(0, 0, 0);
         }
 
     }

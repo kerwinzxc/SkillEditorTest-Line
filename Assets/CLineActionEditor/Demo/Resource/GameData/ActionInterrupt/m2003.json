@@ -8,6 +8,11 @@
             "CheckAllCondition" : true,
             "CrossFadeDuration" : 0.0,
             "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "idle"
+                }
             ]
         },
         {
@@ -17,6 +22,11 @@
             "CheckAllCondition" : true,
             "CrossFadeDuration" : 0.0,
             "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "walk"
+                }
             ]
         },
         {
@@ -26,15 +36,23 @@
             "CheckAllCondition" : true,
             "CrossFadeDuration" : 0.0,
             "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckCustomPropertyString",
+                    "Property"      : "AI",
+                    "CompareVal"    : "atk"
+                }
             ]
         },
         {
             "InterruptName" : "Todead",
             "ActionID"      : "dead",
-            "Enabled"       : false,
+            "Enabled"       : true,
             "CheckAllCondition" : true,
             "CrossFadeDuration" : 0.0,
             "Conditions"        : [
+                {
+                    "InterruptType" : "EIT_CheckDead"
+                }
             ]
         }
     ]
