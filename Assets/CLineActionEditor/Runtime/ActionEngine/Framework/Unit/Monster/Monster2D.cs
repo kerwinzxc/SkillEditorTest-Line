@@ -1,29 +1,9 @@
-﻿/*------------------------------------------------------------------------------
-|
-| COPYRIGHT (C) 2018 - 2026 All Right Reserved
-|
-| FILE NAME  : \Assets\CLineActionEditor\ActionEngine\Framework\Unit\Monster.cs
-| AUTHOR     : https://supercline.com/
-| PURPOSE    : 
-|
-| SPEC       : 
-|
-| MODIFICATION HISTORY
-| 
-| Ver	   Date			   By			   Details
-| -----    -----------    -------------   ----------------------
-| 1.0	   2019-4-3      SuperCLine           Created
-|
-+-----------------------------------------------------------------------------*/
-
 namespace SuperCLine.ActionEngine
 {
-    using System;
     using UnityEngine;
-    using UnityEngine.AI;
     using NumericalType = System.Double;
-
-    public class Monster : Unit
+    
+    public class Monster2D : MonsterBase
     {
         protected int mSearchLayerMask = 0;
         protected MonsterProperty mProperty = null;
@@ -50,7 +30,7 @@ namespace SuperCLine.ActionEngine
             mProperty = PropertyMgr.Instance.GetMonsterProperty(resID);
         }
 
-        public Monster() : base()
+        public Monster2D() : base()
         { }
 
         protected override void OnDispose()
@@ -79,9 +59,9 @@ namespace SuperCLine.ActionEngine
             mSearchLayerMask = LayerMask.GetMask("Role", "LocalPlayer");
 
             // hud
-            Transform hud = Helper.Find(UObject, "hud");
-            HudBlood = HudMgr.Instance.GetHudBlood(hud, EBloodType.EBT_Red);
-            HudText = HudMgr.Instance.GetHudText(hud);
+            // Transform hud = Helper.Find(UObject, "hud");
+            // HudBlood = HudMgr.Instance.GetHudBlood(hud, EBloodType.EBT_Red);
+            // HudText = HudMgr.Instance.GetHudText(hud);
 
             // custom variable
             // TO CLine: using entity excel data for your game.
@@ -108,9 +88,7 @@ namespace SuperCLine.ActionEngine
             mAI.Update(fTick);
             ActionStatus.Update(fTick);
         }
-
         
-
         public override void OnActionStart(Action action)
         {
             base.OnActionStart(action);
@@ -187,35 +165,35 @@ namespace SuperCLine.ActionEngine
         {
             base.AddHP(hp, result);
 
-            if (!IsDead)
-            {
-                EHudType hudType = EHudType.EHT_MonsterBehurt_Normal;
-                switch (result)
-                {
-                    case ECombatResult.ECR_Critical:
-                        hudType = EHudType.EHT_MonsterBehurt_Critical;
-                        break;
-                    case ECombatResult.ECR_SkillNormal:
-                        hudType = EHudType.EHT_MonsterBehurt_Normal_Skill;
-                        break;
-                    case ECombatResult.ECR_SkillCritical:
-                        hudType = EHudType.EHT_MonsterBehurt_Critical_SKill;
-                        break;
-                }
-
-                HudText.ShowText(hudType, hp, 0);
-                HudBlood.Progress = (float)(Attrib.CurHP / GetAttribute(EAttributeType.EAT_MaxHp));
-            }
-            else
-            {
-                if (null != HudBlood)
-                {
-                    HudMgr.Instance.CycleHudBlood(HudBlood);
-                    HudBlood = null;
-                }
-            }
+            // if (!IsDead)
+            // {
+            //     EHudType hudType = EHudType.EHT_MonsterBehurt_Normal;
+            //     switch (result)
+            //     {
+            //         case ECombatResult.ECR_Critical:
+            //             hudType = EHudType.EHT_MonsterBehurt_Critical;
+            //             break;
+            //         case ECombatResult.ECR_SkillNormal:
+            //             hudType = EHudType.EHT_MonsterBehurt_Normal_Skill;
+            //             break;
+            //         case ECombatResult.ECR_SkillCritical:
+            //             hudType = EHudType.EHT_MonsterBehurt_Critical_SKill;
+            //             break;
+            //     }
+            //
+            //     HudText.ShowText(hudType, hp, 0);
+            //     HudBlood.Progress = (float)(Attrib.CurHP / GetAttribute(EAttributeType.EAT_MaxHp));
+            // }
+            // else
+            // {
+            //     if (null != HudBlood)
+            //     {
+            //         HudMgr.Instance.CycleHudBlood(HudBlood);
+            //         HudBlood = null;
+            //     }
+            // }
         }
-
     }
-
 }
+
+

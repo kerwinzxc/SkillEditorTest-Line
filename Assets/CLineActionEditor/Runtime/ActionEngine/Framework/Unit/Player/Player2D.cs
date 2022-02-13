@@ -183,31 +183,8 @@ namespace SuperCLine.ActionEngine
 
         public override void LocalMove(Vector2 move)
         {
-            // Vector3 camDir = CameraMgr.Instance.Camera.transform.forward * move.y + CameraMgr.Instance.Camera.transform.right * move.x;
-            //
-            // Vector3 moveDir = camDir.normalized * Attrib.CurSpeed * Time.deltaTime;
-            // float x = moveDir.x;
-            // float z = moveDir.z;
-            //
-            // mInputMoveDir.x = x;
-            // mInputMoveDir.y = z;
-            //
-            // Helper.Rotate(ref x, ref z, 0, false);
-            // if (ActionStatus.CanRotate && !(ActionStatus.FaceTarget && Target != null))
-            // {
-            //     SetOrientation(Mathf.Atan2(x, z), false, true);
-            // }
-
             if (ActionStatus.CanMove)
             {
-                // if (ActionStatus.ActiveAction.ActionStatus == EActionState.Jump && !OnGround)
-                // {
-                //     Move(new Vector3(x, 0f, z));
-                // }
-                // else
-                // {
-                //     Move(new Vector3(x, -UController.stepOffset, z));
-                // }
                 var speed = move.normalized * Attrib.CurSpeed * Time.deltaTime;
                 if (ActionStatus.ActiveAction.ActionStatus == EActionState.Jump && !OnGround)
                 {

@@ -62,12 +62,12 @@ namespace SuperCLine.ActionEngine
             {
                 case EUnitType.EUT_Player:
                     {
-                        unit = PlayerFactory.NewPlayer(true);
+                        unit = UnitFactory.NewPlayer(true);
                     }
                     break;
                 case EUnitType.EUT_Monster:
                     {
-                        unit = new Monster();
+                        unit = UnitFactory.NewMonster(true);
                     }
                     break;
             }
