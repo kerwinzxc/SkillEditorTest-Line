@@ -93,7 +93,7 @@ namespace SuperCLine.ActionEngine
     public abstract class Unit : XObject, IUObjectDetacher
     {
         private UUnit mUObject;
-        private CharacterController mUController;
+        private IUnitMove mUController;
         private Collider mUCollider;
         private ObjectPool mPool;
         private ActionStatus mActionStatus;
@@ -114,7 +114,6 @@ namespace SuperCLine.ActionEngine
         // material
         private LinkedList<Material> mSkinnedMeshMaterialList = new LinkedList<Material>();
 
-        private readonly float mSkinWidth = 0.05f;
         private float mRadius = 0.5f;
         private float mHeight = 2f;
         private bool mEnableCollision = false;
@@ -144,7 +143,7 @@ namespace SuperCLine.ActionEngine
         public Transform UObject
         { get { return mUObject.transform; } }
 
-        public CharacterController UController
+        public IUnitMove UController
         { get { return mUController; } }
 
         public Collider UCollider
@@ -211,7 +210,7 @@ namespace SuperCLine.ActionEngine
             {
                 mEnableCollision = value;
                 if (null != UController)
-                    UController.enabled = value;
+                    UController.Enabled = value;
                 if (null != UCollider)
                     UCollider.enabled = value;
             }
@@ -440,78 +439,7 @@ namespace SuperCLine.ActionEngine
         }
         public void Move(Vector3 offset)
         {
-            if (UnitType == EUnitType.EUT_Player)
-            {
-                if (offset.y != 0)
-                    mOnGround = false;
-                if (UController != null && UController.enabled)
-                {
-                    //float y = UUnit.transform.position.y;
-                    CollisionFlags collisionFlags = UController.Move(offset);
-
-                    if ((collisionFlags & CollisionFlags.Below) == CollisionFlags.Below)
-                        mOnGround = true;
-                    if ((collisionFlags & CollisionFlags.Sides) == CollisionFlags.Sides)
-                        mOnTouchSide = true;
-                    else if (offset.x != 0f || offset.z != 0f)
-                        mOnTouchSide = false;
-                }
-                else
-                {
-                    SetPosition(Position + offset);
-                }
-
-            }
-            else
-            {
-                if (mEnableCollision)
-                {
-                    float radius2 = 2 * mRadius;
-                    // xoz
-                    if (offset.x != 0f && offset.z != 0f)
-                    {
-                        Vector3 trans = new Vector3(offset.x, 0, offset.z);
-                        Vector3 dir = trans.normalized;
-                        float dist = trans.magnitude + radius2 + mSkinWidth;
-                        Vector3 origin = new Vector3(Position.x, Position.y + radius2, Position.z) - dir * mSkinWidth;
-
-                        mOnTouchSide = false;
-                        RaycastHit hitInfo;
-                        if (Physics.Raycast(origin, dir, out hitInfo, dist, mLayerMask))
-                        {
-                            mOnTouchSide = true;
-                            float num = hitInfo.distance - radius2;
-
-                            offset.x = (num > 0f ? dir.x * num : 0f);
-                            offset.z = (num > 0f ? dir.z * num : 0f);
-
-                        }
-                    }
-
-                    // y
-                    mOnGround = false;
-                    if (offset.y < 0f)
-                    {
-                        Vector3 origin = new Vector3(Position.x, Position.y + radius2, Position.z);
-                        float dist = radius2 - offset.y;
-
-                        RaycastHit hitInfo;
-                        if (Physics.Raycast(origin, Vector3.down, out hitInfo, dist, mLayerMask))
-                        {
-                            float num = hitInfo.distance - radius2;
-                            offset.y = (Mathf.Abs(num) <= 0.001f ? 0f : -num);
-
-                            mOnGround = true;
-                        }
-                    }
-                }
-                else
-                {
-                    mOnGround = false;
-                }
-
-                SetPosition(Position + offset);
-            }
+            mUController?.Move(this, offset, ref mOnGround, ref mOnTouchSide);
         }
         void UpdateChildren(float fTick)
         {
@@ -686,7 +614,7 @@ namespace SuperCLine.ActionEngine
         public virtual void OnMessage(Message msg)
         { }
 
-        public virtual void Init(string resID, Vector3 pos, float yaw, ECampType campType, string debugName = null)
+        public virtual void Init(string resID, Vector3 pos, float yaw, ECampType campType, string debugName = null, bool is3D = true)
         {
             ResID = resID;
 
@@ -700,6 +628,11 @@ namespace SuperCLine.ActionEngine
                 mUObject = go.AddComponent<UUnit>();
             mUObject.SetUnit(this);
 
+            var moveType = 
+            mUController = go.GetComponent<IUnitMove>();
+            if (mUController == null)
+                mUController = is3D ? go.AddComponent<UnitMove3D>(): go.AddComponent<UnitMove2D>();
+            
             if (!string.IsNullOrEmpty(debugName))
             {
                 mUObject.gameObject.name = debugName;
@@ -710,11 +643,10 @@ namespace SuperCLine.ActionEngine
 
         protected void Init(Vector3 pos, float yaw, ECampType campType)
         {
-            mUController = mUObject.GetComponent<CharacterController>();
             if (mUController != null)
             {
-                mUController.enabled = false;
-                mRadius = Mathf.Max(mRadius, mUController.radius);
+                mUController.Enabled = false;
+                mRadius = Mathf.Max(mRadius, mUController.Controller.radius);
             }
 
             mUCollider = mUObject.GetComponent<CapsuleCollider>();

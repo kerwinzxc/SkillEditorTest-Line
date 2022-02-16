@@ -45,10 +45,10 @@ namespace SuperCLine.ActionEngine
             base.OnDispose();
         }
 
-        public override void Init(string resID, Vector3 pos, float yaw, ECampType campType, string debugName = null)
+        public override void Init(string resID, Vector3 pos, float yaw, ECampType campType, string debugName = null, bool is3D = true)
         {
-            base.Init(resID, pos, yaw, campType, debugName);
-
+            base.Init(resID, pos, yaw, campType, debugName, false);
+            
             mTargetSystem = new TargetHateStatus() { owner = this };
 
             // action group
